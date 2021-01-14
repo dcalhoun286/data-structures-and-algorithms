@@ -27,11 +27,10 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 const appendTheEnd = (str) => {
   // Solution code here...
   let x = str;
-
-  let y = '';
-  y = x.concat(y);
+  let y = ' The end.';
+  x += y;
   // Documentation for .concat() -- https://www.techonthenet.com/js/string_concat.php
-  return y;
+  return x;
 };
 
 /* ------------------------------------------------------------------------------------------------
