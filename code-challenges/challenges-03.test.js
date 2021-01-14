@@ -19,7 +19,7 @@ let $ = createSnippetWithJQuery(`
 
 const changeAllClassNames = () => {
   // Solution code here...
-  $('ul').children().addClass('fruit');
+  $('#fruits').children().addClass('fruit');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ const sortBackwards = (arr) => {
       return 0;
     }
   });
-
+  return arr;
 };
 
 
@@ -57,7 +57,6 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 
 const alphabetize = (arr) => {
   // Solution code here...
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,7 +108,6 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 
 const sortNumbersByLength = (arr) => {
   // Solution code here...
-
 };
 
 /*-----------------------------------------------------------------------------------------------
