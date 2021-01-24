@@ -60,10 +60,22 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
-  arr.map(value => {
-    console.log('result', value.match(/[aieou]/));
-    return value.match(/[aieou]/);
+  const filteredWords = arr.filter(word => {
+    if (word.match(/a/g)) {
+      return true;
+    } else if (word.match(/e/g)) {
+      return true;
+    } else if (word.match(/i/g)) {
+      return true;
+    } else if (word.match(/o/g)) {
+      return true;
+    } else if (word.match(/u/g)) {
+      return true;
+    }
   });
+
+  console.log('array', filteredWords);
+  return filteredWords;
 };
 
 
@@ -77,7 +89,15 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  const uniqueArray = arr.filter(value => {
+    if (forbiddenValues.includes(value)) {
+      return false;
+    } else if (!forbiddenValues.includes(value)) {
+      return true;
+    }
+  });
 
+  return uniqueArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
