@@ -38,35 +38,28 @@ let $ = createSnippetWithJQuery(`
 
 const templateWithJQuery = () => {
   // Solution code here...
-  const starWarsArray = [];
-  function StarWars(name, height, eye_color) {
-    this.name = name;
-    this.height = height;
-    this.eye_color = eye_color;
-    // starWarsArray.push(this);
-  }
-  function ajaxFunction(){
 
-    $.ajax(starWarsPeople).then(stuffThatComesBack => {
-      console.log(stuffThatComesBack);
-      stuffThatComesBack.forEach((person) => {
+  starWarsPeople.forEach(character => {
+    const $html = $('#template').html();
 
-        starWarsArray.push(new StarWars(person.name, person.height, person.eye_color));
-      });
+    // new section created each instance
+    const $template = $(`<section>${$html}</section`);
 
-      StarWars.prototype.render = function(){
-        const $h2 = $('#template').append('h2');
-        $h2.text(this.name);
-        const $h3 = $('#template').append('h3');
-        $h3.text(this.height);
-        const $p = $('#template').append('p');
-        $p.text(this.eye_color);
+    // star wars character name
+    const $h2 = $template.find('h2');
+    $h2.text(character.name);
 
-      };
-      StarWars.render();
-    });
-  }
-  ajaxFunction();
+    // star wars character title
+    const $h3 = $template.find('h3');
+    $h3.text(character.height);
+
+    // star wars character eye color
+    const $p = $template.find('p');
+    $p.text(character.eye_color);
+
+    // append the character info to the DOM
+    $('main').append($template);
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,7 +78,15 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
+  for (let k = 0; k <= str.length; k++) {
+    let slicedString = str.slice(k);
+    // console.log(`sliced string at ${k}: `, slicedString);
+    result.push(slicedString);
+  }
+
+  return result;
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -96,8 +97,18 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  
-  return newArray;
+  // console.log(arr);
+  // console.log(arr.slice(0,1));
+  // console.log(arr.slice(1,2));
+  // console.log(arr.slice(2,3));
+
+  const arr1 = [];
+  for (let j = 0; j < arr.length; j++) {
+    arr1.push(arr.slice(j,j+1));
+    // console.log(arr1);
+  }
+
+  return arr1;
 };
 
 
@@ -145,6 +156,26 @@ const gruffaloCrumble = {
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  const tempArray = [];
+  console.log(gruffaloCrumble.ingredients);
+  for (let y = 0; y < recipe.ingredients.length; y++) {
+    tempArray.push(recipe.ingredients[y]);
+  }
+  // console.log(tempArray);
+
+  result.push(tempArray[0].slice(15));
+  result.push(tempArray[1].slice(9));
+  result.push(tempArray[2].slice(9));
+  result.push(tempArray[3].slice(9));
+  result.push(tempArray[4].slice(10));
+  result.push(tempArray[5].slice(8));
+  result.push(tempArray[6].slice(8));
+  result.push(tempArray[7].slice(8));
+  result.push(tempArray[8].slice(8));
+  result.push(tempArray[9].slice(10));
+  result.push(tempArray[10].slice(10));
+
+  console.log(result);
   return result;
 };
 
@@ -271,7 +302,7 @@ describe('Testing challenge 1', () => {
     expect($('section:nth-child(2) h2').text()).toStrictEqual('Luke Skywalker');
     expect($('section:nth-child(3) h3').text()).toStrictEqual('167');
     expect($('section:nth-child(4) p').text()).toStrictEqual('red');
-  })
+  });
 });
 
 describe('Testing challenge 2', () => {
