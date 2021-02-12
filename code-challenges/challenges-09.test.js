@@ -22,10 +22,13 @@ Next, write a function named getCurrentEvents that takes in the request and resp
 
 // Express sever here
 const createServer = () => {
-  const express=require('express');
-  const app=express();
+  const express = require('express');
+  const app = express();
 
   // Routes go here
+
+  app.get('/events', getCurrentEvents);
+
   // Solution code here...
 
   var server = app.listen(3301, function () {
@@ -157,18 +160,27 @@ const currentEvents = {
       url: "https://bgr.com/2020/04/13/coronavirus-mask-effectiveness-surgical-how-to/"
     }
   ]
-}
+};
 
 function getCurrentEvents(request, response){
   // Solution code here...
+  response.status(200).send(mapCurrentEvents(request, response));
 }
 
 const mapCurrentEvents = () => {
   // Solution code here...
-}
+  const mappedEvents = currentEvents.news.map(obj => new Event(obj));
+  return mappedEvents;
+};
 
 function Event(obj){
   // Solution code here...
+  this.author = obj.author;
+  this.categories = obj.category;
+  this.summary = obj.description;
+  this.img_url = obj.image;
+  this.date = obj.published;
+  this.title = obj.title;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -181,7 +193,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  arr.reduce()
+  return arr.reduce(accumulator => accumulator+1, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
