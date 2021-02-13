@@ -108,32 +108,24 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
 
-  const allTheArrays = input.filter(j => {
-    let miniArray = [];
-    if (j.length > 0) {
-      miniArray = j.map(z => {
-        if (typeof z === 'string') {
-          return 'not a number';
-        } else if (z % 5 === 0) {
-          return z;
-        } else if (z % 5 !== 0) {
-          return 'this is not divisible by 5';
-        }
-      });
-    }
-
-
-    // for (let k = 0; k < j.length; k++) {
-    //   if (isNaN(typeof(j[k]))) {
-    //     j.splice(k, 1);
-    //   } else if (j[k] % 5 !== 0) {
-    //     j.splice(k, 1);
-    //   }
-    // }
-    console.log('this is the small array', miniArray);
+  const output1 = input.map(arr => {
+    const miniOutput1 = arr.filter(el => {
+      if (typeof el === 'number' && el % 5 === 0) {
+        return el;
+      }
+    });
+    return miniOutput1;
   });
-  console.log('allthearrays variable', allTheArrays);
+
+  const output2 = output1.map(array => {
+    // Documentation for Math.pow(): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
+    const miniOutput2 = array.map(num => Math.pow(2, num));
+    return miniOutput2;
+  });
   console.log('input array', input);
+  console.log('first output array', output1);
+  console.log('final output array', output2);
+  return output2;
 };
 
 /* ------------------------------------------------------------------------------------------------
