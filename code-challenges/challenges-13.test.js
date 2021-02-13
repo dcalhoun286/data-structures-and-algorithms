@@ -74,8 +74,28 @@ For example, (123) 456-7890 returns 1234567890
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
   const newPhoneNumbers = arr.map(phoneNumber => {
-    return phoneNumber.split('(');
+
+    const splitPhoneNumber = phoneNumber.split(phoneNumber.charAt(0));
+
+    const joinPhoneNumber = splitPhoneNumber.join('');
+
+    const splitAgain = joinPhoneNumber.split(phoneNumber.charAt(4));
+
+    const joinAgain = splitAgain.join('');
+
+    const splitThirdTime = joinAgain.split(phoneNumber.charAt(5));
+
+    const joinThirdTime = splitThirdTime.join('');
+
+    const splitFinalTime = joinThirdTime.split(phoneNumber.charAt(9));
+
+    const joinFinalTime = splitFinalTime.join('');
+
+    return joinFinalTime;
   });
+
+  console.log('input array', arr);
+  console.log('new array', newPhoneNumbers);
 
   return newPhoneNumbers;
 
