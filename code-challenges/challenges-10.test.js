@@ -111,7 +111,7 @@ const divisibleByFiveTwoToThePower = (input) => {
   const output1 = input.map(arr => {
     const miniOutput1 = arr.filter(el => {
       if (typeof el === 'number' && el % 5 === 0) {
-        return el;
+        return true;
       }
     });
     return miniOutput1;
