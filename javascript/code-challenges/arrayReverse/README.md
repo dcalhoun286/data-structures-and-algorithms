@@ -5,7 +5,7 @@ Pull Request [array-reverse](https://github.com/dcalhoun286/data-structures-and-
 
 ## Challenge
 
-Write a function called `reverseArray()` which takes an array as an argument.
+Write a function called `reverseArray()` which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
@@ -19,4 +19,8 @@ Big O:
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard](whiteboard.png)
+![array-reverse whiteboard](assets/arrayReverse.jpeg)
+
+## Collaborators
+
+- I pair programmed with Anne Thorsteinson for this code challenge assignment.
