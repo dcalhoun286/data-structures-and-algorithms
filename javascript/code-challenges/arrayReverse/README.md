@@ -9,13 +9,11 @@ Write a function called `reverseArray()` which takes an array as an argument. Wi
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-- Iterate the array with a for loop
-- At each element, use `console.log()` to print the value
-
-Big O:
-
-- Time: O(n)
-- Space: O(1)
+- Identify the start and end of the array (0 and length -1)
+- Swap the arr[start] with arr[end]
+- Move Start forward by 1
+- Move End backwards by 1
+- Repeat while start <= end
 
 ## Solution
 <!-- Embedded whiteboard image -->
