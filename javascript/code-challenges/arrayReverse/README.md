@@ -18,6 +18,7 @@ Write a function called `reverseArray()` which takes an array as an argument. Wi
 ## Solution
 <!-- Embedded whiteboard image -->
 ![array-reverse whiteboard](assets/array-reverse.jpeg)
+- [Solution code for array-reverse](array-reverse.js)
 
 ## Collaborators
 

@@ -1,6 +1,6 @@
 # Array Shift
 
-Pull Request [array-shift]()
+Pull Request [array-shift](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/27)
 <!-- Short summary or background information -->
 
 ## Challenge
@@ -13,6 +13,7 @@ Write a function called `insertShiftArray()` which takes in an array and the val
 ## Solution
 <!-- Embedded whiteboard image -->
 ![array-shift whiteboard](assets/array-shift.png)
+-[Solution code for array-shift](array-shift.js)
 
 ## Collaborators
 
