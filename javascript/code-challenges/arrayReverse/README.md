@@ -17,7 +17,7 @@ Write a function called `reverseArray()` which takes an array as an argument. Wi
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![array-reverse whiteboard](assets/arrayReverse.jpeg)
+![array-reverse whiteboard](assets/array-reverse.jpeg)
 
 ## Collaborators
 

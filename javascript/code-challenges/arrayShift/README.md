@@ -12,6 +12,8 @@ Write a function called `insertShiftArray()` which takes in an array and the val
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![array-shift whiteboard]()
+![array-shift whiteboard](assets/array-shift.png)
 
 ## Collaborators
+
+- I pair programmed with Nassir Abegaz for this code challenge assignment.
