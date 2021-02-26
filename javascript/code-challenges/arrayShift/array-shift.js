@@ -15,7 +15,7 @@
 const insertShiftArray = (inputArray, inputNum) => {
   const outputArray = [];
 
-  // Math.ceil is being used to account for arrays with a odd-numbered length number, in these cases inputArray.length / 2 is not an integer
+  // Math.ceil is being used to account for arrays with a odd-numbered length number, in these cases inputArray.length / 2 is not an integer, and indices need to be integers
   const half = Math.ceil(inputArray.length / 2);
 
   for (let i = 0; i < inputArray.length; i++) {
