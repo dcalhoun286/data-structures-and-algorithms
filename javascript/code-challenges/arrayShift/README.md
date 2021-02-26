@@ -1,6 +1,7 @@
 # Array Shift
 
-Pull Request [array-shift](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/27)
+- Pull Request #1 [array-shift](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/27)
+- Pull Request #2 [array-shift](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/28)
 <!-- Short summary or background information -->
 
 ## Challenge
@@ -18,3 +19,4 @@ Write a function called `insertShiftArray()` which takes in an array and the val
 ## Collaborators
 
 - I pair programmed with Nassir Abegaz for this code challenge assignment.
+- Bryant Davis (TA) gave us assistance in finding a solution.
