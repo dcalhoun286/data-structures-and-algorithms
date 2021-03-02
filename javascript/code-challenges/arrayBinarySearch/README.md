@@ -1,6 +1,7 @@
 # Array Binary Search
 
-Pull Request [array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/29)
+- Pull Request #1[array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/29)
+- Pull Request #2[array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/30)
 <!-- Short summary or background information -->
 
 ## Challenge
