@@ -1,6 +1,7 @@
 # Array Binary Search
 
-Pull Request [array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/29)
+- Pull Request #1[array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/29)
+- Pull Request #2[array-binary-search](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/30)
 <!-- Short summary or background information -->
 
 ## Challenge
@@ -29,4 +30,5 @@ Our team took this approach because it requires less time than iterating through
 ## Collaborators and Resources
 
 - I pair programmed with Cody Carpenter and Ryan Tipper for this code challenge assignment.
+- Kristian Esvelt (TA) helped me debug my .test.js file
 - **Resource**: [Binary search algorithm - Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
