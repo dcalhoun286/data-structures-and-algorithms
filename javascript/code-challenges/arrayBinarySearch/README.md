@@ -29,4 +29,5 @@ Our team took this approach because it requires less time than iterating through
 ## Collaborators and Resources
 
 - I pair programmed with Cody Carpenter and Ryan Tipper for this code challenge assignment.
+- Kristian Esvelt (TA) helped me debug my .test.js file
 - **Resource**: [Binary search algorithm - Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
