@@ -1,6 +1,6 @@
 # Linked Lists
 
-- Pull Request [Linked Lists]()
+- Pull Request [Linked List](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/31)
 <!-- Short summary or background information -->
 
 ## Challenge
