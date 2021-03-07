@@ -33,7 +33,7 @@ describe('====== Linked List Class ======', () => {
     list.insert(two);
     list.insert(one);
 
-    expect(list.includes(two)).toBe(true);
+    expect(list.includes(five)).toBe(true);
     expect(list.includes(four)).toBe(false);
   });
 
