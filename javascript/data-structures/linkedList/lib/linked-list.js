@@ -26,9 +26,24 @@ class LinkedList {
     }
   }
 
-  // includes(value) {
+  includes(inputVal) {
+    if (this.head) {
 
-  // }
+      let current = this.head;
+
+      if (current.value === inputVal) {
+        return true;
+      }
+
+      while (current.next) {
+        current = current.next;
+        if (current.value === inputVal) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
 
   // toString(value) {
 
