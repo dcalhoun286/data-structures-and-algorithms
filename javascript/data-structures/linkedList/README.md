@@ -1,7 +1,10 @@
-# Linked Lists
+# Implementation: Singly Linked Lists
+
+This is a Data Structures and Algorithms challenge that works with [singly linked lists](https://www.educative.io/edpresso/what-is-a-singly-linked-list).
 
 - Pull Request [Linked List](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/31)
-<!-- Short summary or background information -->
+
+## Author: Dar-Ci Calhoun
 
 ## Challenge
 
@@ -31,11 +34,21 @@ Write tests to prove the following functionality:
 1. Can properly return a collection of all the values that exist in the linked list
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+An explanation for my approach:
+
+- Each Node always has at least `value` property and a `next` property, with the default value of `next` being `null`. Since this is a singly linked list, those are the only two properties I need. I will instantiate this class to build my Linked List.
+- I used the approach below for `insert(value)` because regardless of the size of the linked list, to achieve O(1), we only need to grow our linked list by finding the head of the list and attaching our new node to the head.
+- I used the approach below for `includes(inputVal)` because if the head of the list evaluates to `false`, none of the code block needs to run, and the method can terminate by returning `false`. This method achieves O(n), since at most it might need to traverse the entire list to possibly find a match.
+- `toString()` requires a big O of O(n) because we must visit every node in the list to read its value property and insert it into the output string.
 
 ## Solution
-<!-- Embedded whiteboard image -->
-![whiteboard]()
+
+**WHITEBOARD - TOP HALF**
+![whiteboard1](./assets/linked-list1.png)
+**WHITEBOARD - BOTTOM HALF**
+![whiteboard2](./assets/linked-list2.png)
+
 **Solution Code**:
 
 - [Node Class](./lib/node.js)
