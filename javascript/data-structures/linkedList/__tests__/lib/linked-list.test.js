@@ -19,4 +19,21 @@ describe('====== Linked List Class ======', () => {
     expect(list.head.value).toEqual(second);
     expect(list.head.next.value).toEqual(first);
   });
+
+  it('should return true if the input value exists as a node\'s value somewhere within the list', () => {
+    let list = new LinkedList();
+    let one = 'one';
+    let two = 'two';
+    let three = 'three';
+    let four = 'four';
+    let five = 'five';
+
+    list.insert(five);
+    list.insert(three);
+    list.insert(two);
+    list.insert(one);
+
+    expect(list.includes(two)).toEqual(true);
+    expect(list.includes(four)).toEqual(false);
+  });
 });
