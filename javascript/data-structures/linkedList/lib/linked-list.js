@@ -45,9 +45,19 @@ class LinkedList {
     return false;
   }
 
-  // toString(value) {
-
-  // }
+  toString(list) {
+    let str = '';
+    if (list.head) {
+      let current = list.head;
+      str += `{ ${current.value} } -> `;
+      while (current.next) {
+        current = current.next;
+        str += `{ ${current.value} } -> `;
+      }
+    }
+    str += 'NULL';
+    return str;
+  }
 }
 
 module.exports = LinkedList;
