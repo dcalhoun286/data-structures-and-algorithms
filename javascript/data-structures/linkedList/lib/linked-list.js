@@ -45,10 +45,10 @@ class LinkedList {
     return false;
   }
 
-  toString(list) {
+  toString() {
     let str = '';
-    if (list.head) {
-      let current = list.head;
+    let current = this.head;
+    if (this.head) {
       str += `{ ${current.value} } -> `;
       while (current.next) {
         current = current.next;

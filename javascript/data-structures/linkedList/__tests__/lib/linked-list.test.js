@@ -51,6 +51,6 @@ describe('====== Linked List Class ======', () => {
     list1.insert(seven);
     list1.insert(six);
 
-    expect(list1.toString(list1)).toEqual(`{ ${six} } -> { ${seven} } -> { ${eight} } -> { ${nine} } -> { ${ten} } -> NULL`);
+    expect(list1.toString()).toEqual(`{ ${six} } -> { ${seven} } -> { ${eight} } -> { ${nine} } -> { ${ten} } -> NULL`);
   });
 });
