@@ -8,4 +8,4 @@
 - Class 02: [array-shift](code-challenges/arrayShift/README.md)
 - Class 03: [array-binary-search](code-challenges/arrayBinarySearch/README.md)
 
-- Class 05: [linked-list](code-challenges/linkedList/README.md)
+- Class 05: [linked-list](data-structures/linkedList/README.md)

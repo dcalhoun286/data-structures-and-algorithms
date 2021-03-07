@@ -35,7 +35,12 @@ Write tests to prove the following functionality:
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![array-shift whiteboard](assets/array-shift.png)
--[Solution code for array-shift](array-shift.js)
+![whiteboard]()
+**Solution Code**:
+
+- [Node Class](./lib/node.js)
+- [LinkedList Class](./lib/linked-list.js)
 
 ## Collaborators
+
+- Ron Dunphy (TA) helped me debug why my test suites were not running properly.
