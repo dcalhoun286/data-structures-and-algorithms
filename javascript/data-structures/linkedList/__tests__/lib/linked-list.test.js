@@ -20,7 +20,7 @@ describe('====== Linked List Class ======', () => {
     expect(list.head.next.value).toEqual(first);
   });
 
-  it('should return true if the input value exists as a node\'s value somewhere within the list', () => {
+  it('will return true when searching for a value that existswithin the linked list, and false if the value doesn\'t exist in the list', () => {
     let list = new LinkedList();
     let one = 'one';
     let two = 'two';
