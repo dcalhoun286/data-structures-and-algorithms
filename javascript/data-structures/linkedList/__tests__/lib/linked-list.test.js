@@ -36,4 +36,21 @@ describe('====== Linked List Class ======', () => {
     expect(list.includes(two)).toBe(true);
     expect(list.includes(four)).toBe(false);
   });
+
+  it('can properly return a collection of all the values that exist in the linked list', () => {
+    let list1 = new LinkedList();
+    let six = 'six';
+    let seven = 'seven';
+    let eight = 'eight';
+    let nine = 'nine';
+    let ten = 'ten';
+
+    list1.insert(ten);
+    list1.insert(nine);
+    list1.insert(eight);
+    list1.insert(seven);
+    list1.insert(six);
+
+    expect(list1.toString(list1)).toEqual(`{ ${six} } -> { ${seven} } -> { ${eight} } -> { ${nine} } -> { ${ten} } -> NULL`);
+  });
 });
