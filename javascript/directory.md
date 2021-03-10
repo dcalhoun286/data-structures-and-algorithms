@@ -8,4 +8,6 @@
 - Class 02: [array-shift](code-challenges/arrayShift/README.md)
 - Class 03: [array-binary-search](code-challenges/arrayBinarySearch/README.md)
 
-- Class 05: [linked-list](data-structures/linkedList/README.md)
+- Class 05: [linked-list: insert(value), includes(value), toString()](data-structures/linkedList/README.md)
+
+- Class 06: [ll-insertions: append(value), insertBefore(value, newVal), insertAfter(value, newVal)](data-structures/linkedList/README.md)

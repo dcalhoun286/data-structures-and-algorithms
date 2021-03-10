@@ -6,7 +6,7 @@ This is a Data Structures and Algorithms challenge that works with [singly linke
 
 ## Author: Dar-Ci Calhoun
 
-## Challenge
+## Challenge - `linked-list` branch
 
 ### Features
 
@@ -28,7 +28,7 @@ Write tests to prove the following functionality:
 1. Can successfully instantiate an empty linked list
 1. Can properly insert into the linked list
 1. The head property will properly point to the first node in the linked list
-1. Can properly insnert multiple nodes into the linked list
+1. Can properly insert multiple nodes into the linked list
 1. Will return true when finding a value within the linked list that exists
 1. Will return false when searching for a value in the linked list that does not exist
 1. Can properly return a collection of all the values that exist in the linked list
@@ -42,12 +42,43 @@ An explanation for my approach:
 - I used the approach below for `includes(inputVal)` because if the head of the list evaluates to `false`, none of the code block needs to run, and the method can terminate by returning `false`. This method achieves O(n), since at most it might need to traverse the entire list to possibly find a match.
 - `toString()` requires a big O of O(n) because we must visit every node in the list to read its value property and insert it into the output string.
 
+## Challenge - `ll-insertions` branch
+
+### Added Features
+
+- Define a method called `append(value)` which adds a new node with the given `value` to the end of the list
+- Define a method called `insertBefore(value, newVal)` which adds a new node with the given `newVal` immediately before the first `value` node
+- Define a method called `insertAfter(value, newVal)` which adds a new node with the given `newVal` immediately after the first `value` node.
+
+### Structure and Testing
+
+Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge.
+
+Write tests to prove the following functionality:
+
+1. Can successfully add a node to the end of the linked list
+1. Can successfully add multiple nodes to the end of a linked list
+1. Can successfully insert a node before a node located in the middle of a linked list
+1. Can successfully insert a node before the first node of a linked list
+1. Can successfully insert after a node in the middle of the linked list
+1. Can successfully insert a node after the last node of the linked list
+
+## Approach & Efficiency
+
+An explanation for my approach:
+
+- I used the approach below for `append(value)` because [...].
+- I used the approach below for `insertBefore(value, newVal)` because [...].
+- I used the approach below for `insertAfter(value, newVal)` because [...].
+
 ## Solution
 
-**WHITEBOARD - TOP HALF**
-![whiteboard1](./assets/linked-list1.png)
-**WHITEBOARD - BOTTOM HALF**
-![whiteboard2](./assets/linked-list2.png)
+**WHITEBOARD for `linked-list` branch -- TOP HALF**
+![whiteboard1-linked-list](./assets/linked-list1.png)
+**WHITEBOARD for `linked-list` branch -- BOTTOM HALF**
+![whiteboard2-linked-list](./assets/linked-list2.png)
+**WHITEBOARD for `ll-insertions` branch**
+![ll-insertions]()
 
 **Solution Code**:
 
@@ -57,3 +88,7 @@ An explanation for my approach:
 ## Collaborators
 
 - Ron Dunphy (TA) helped me debug why my test suites were not running properly.
+- I worked on the following methods with classmate Dawit Ayana:
+  - `append(value)`
+  - `insertBefore(value, newVal)`
+  - `insertAfter(value, newVal)`
