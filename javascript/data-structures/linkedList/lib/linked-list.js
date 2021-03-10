@@ -58,6 +58,19 @@ class LinkedList {
     str += 'NULL';
     return str;
   }
+
+  append(value) {
+
+  }
+
+  insertBefore(searchKey, newVal) {
+
+  }
+
+  insertAfter(searchKey, newVal) {
+
+  }
+
 }
 
 module.exports = LinkedList;
