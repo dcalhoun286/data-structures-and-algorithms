@@ -34,17 +34,17 @@ describe('====== LinkedList insertions ======', () => {
     let forty = 40;
     let fifty = 50;
 
-    list.insert(ten);
-    list.insert(twenty);
-    list.insert(thirty);
-    list.insert(forty);
     list.insert(fifty);
+    list.insert(forty);
+    list.insert(thirty);
+    list.insert(twenty);
+    list.insert(ten);
 
-    list.insertBefore(40, 35);
-    expect(list.head.next.next.next.value).toEqual(60);
-    expect(list.head.next.next.next.next.value).toEqual(40);
+    list.insertBefore(30, 25);
+    expect(list.head.next.next.value).toEqual(25);
+    expect(list.head.next.next.next.value).toEqual(30);
 
-    expect(list.insertBefore(39, 37)).toThrow('search key not found in list');
+    expect(list.insertBefore(39, 37)).toBe('Exception');
   });
 
   it('should add a node with a new value immediately after the first node in a list with a value that matches a search key', () => {
@@ -56,18 +56,19 @@ describe('====== LinkedList insertions ======', () => {
     let forty = 40;
     let fifty = 50;
 
-    list.insert(ten);
-    list.insert(twenty);
-    list.insert(thirty);
-    list.insert(forty);
     list.insert(fifty);
+    list.insert(forty);
+    list.insert(thirty);
+    list.insert(twenty);
+    list.insert(ten);
 
     list.insertAfter(50, 60);
     expect(list.head.next.next.next.next.next.value).toEqual(60);
-    list.insertAfter(30, 38);
-    expect(list.head.next.next.next.value).toEqual(38);
-    expect(list.head.next.next.next.next.value).toEqual(40);
 
-    expect(list.insertAfter(555, 2)).toThrow('search key not found in list');
+    list.insertAfter(20, 25);
+    expect(list.head.next.next.value).toEqual(25);
+    expect(list.head.next.next.next.value).toEqual(30);
+
+    expect(list.insertAfter(555, 2)).toBe('Exception');
   });
 });
