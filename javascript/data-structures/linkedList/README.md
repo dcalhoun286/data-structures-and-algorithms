@@ -1,8 +1,9 @@
 # Implementation: Singly Linked Lists
 
-This is a Data Structures and Algorithms challenge that works with [singly linked lists](https://www.educative.io/edpresso/what-is-a-singly-linked-list).
+These are Data Structures and Algorithms challenges that work with [singly linked lists](https://www.educative.io/edpresso/what-is-a-singly-linked-list).
 
-- Pull Request [Linked List](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/31)
+- Pull Request [linked-list](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/31)
+- Pull Request [ll-insertions](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/32)
 
 ## Author: Dar-Ci Calhoun
 
