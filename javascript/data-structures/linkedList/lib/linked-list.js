@@ -61,7 +61,7 @@ class LinkedList {
 
   append(value) {
     let node = new Node(value);
-    if(!this.head) {
+    if (!this.head) {
       this.head = node;
     } else {
       let current = this.head;
@@ -73,7 +73,26 @@ class LinkedList {
   }
 
   insertBefore(searchKey, newVal) {
+    let node = new Node(newVal);
+    if (this.head) {
+      let current = this.head;
+      if (searchKey === current.value) {
 
+        node.next = current;
+        this.head = node;
+        return;
+      } else {
+        while (current.next) {
+          if (searchKey === current.next.value) {
+            node.next = current.next;
+            current.next = node;
+            return;
+          }
+          current = current.next;
+        }
+      }
+    }
+    return 'Exception';
   }
 
   insertAfter(searchKey, newVal) {
