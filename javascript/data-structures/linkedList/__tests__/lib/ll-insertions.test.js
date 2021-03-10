@@ -22,7 +22,7 @@ describe('====== LinkedList insertions ======', () => {
     list.append(sixty);
 
     expect(list.head.next.next.next.next.next.value).toEqual(60);
-    expect(list.head.next.next.next.next.next.next).toBe(null);
+    expect(list.head.next.next.next.next.next.next).toEqual(null);
   });
 
   it('should add a node with a new value immediately preceding the first node in a list with a value that matches a search key', () => {
