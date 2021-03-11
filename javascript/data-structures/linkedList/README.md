@@ -69,7 +69,7 @@ Write tests to prove the following functionality:
 An explanation for my approach:
 
 - I used the approach below for `append(value)` because at best this will have a big O value of O(n) when traversing the list to the end and adding the new Node onto the end.
-- I used the approach below for `insertBefore(value, newVal)` because if the node with the matching value is not the head node, we need to keep track of where we are in the list with a counter, traverse the list again until we are at the node preceding the node with the matching value, and insert our new node into the list before the matching node in a way that data won't be lost. Big O is O(2n).
+- After completing the whiteboard for `insertBefore(value, newVal)`, I figured out a way to refactor my code so that Big O was optimized. Instead of traversing the list a 2nd time, I instead evaluated the condition `current.next.value === searchKey`. Big O is O(n).
 - I used the approach below for `insertAfter(value, newVal)` because once we find the node in the list with a matching value, we can insert our new Node after this matching node (in a way that data won't be lost). Big O is O(n).
 
 ## Solution
@@ -78,8 +78,10 @@ An explanation for my approach:
 ![whiteboard1-linked-list](./assets/linked-list1.png)
 **WHITEBOARD for `linked-list` branch -- BOTTOM HALF**
 ![whiteboard2-linked-list](./assets/linked-list2.png)
-**WHITEBOARD for `ll-insertions` branch**
-![ll-insertions](./assets/ll-insertions.png)
+**WHITEBOARD for `ll-insertions` branch -- TOP HALF**
+![whiteboard1-ll-insertions](./assets/ll-insertions1.png)
+**WHITEBOARD for `ll-insertions` branch -- BOTTOM HALF**
+![whiteboard2-ll-insertions](./assets/ll-insertions2.png)
 
 **Solution Code**:
 
