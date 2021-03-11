@@ -96,7 +96,27 @@ class LinkedList {
   }
 
   insertAfter(searchKey, newVal) {
-
+    let node = new Node(newVal);
+    if (this.head) {
+      if (this.head.value === searchKey) {
+        let temp = this.head.next;
+        this.head.next = node;
+        node.next = temp;
+        return;
+      } else {
+        let current = this.head;
+        while (current.next) {
+          current = current.next;
+          if (current.value === searchKey) {
+            let temp = current.next;
+            current.next = node;
+            node.next = temp;
+            return;
+          }
+        }
+      }
+    }
+    return 'Exception';
   }
 
 }
