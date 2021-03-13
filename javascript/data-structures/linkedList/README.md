@@ -92,7 +92,7 @@ An explanation for my approach:
 **WHITEBOARD for `ll-insertions` branch -- BOTTOM HALF**
 ![whiteboard2-ll-insertions](./assets/ll-insertions2.png)
 **WHITEBOARD for `ll-kth-from-end` branch**
-![whiteboard-ll-kth-from-end]()
+![whiteboard-ll-kth-from-end](./assets/ll-kth-from-end.png)
 
 **Solution Code**:
 
