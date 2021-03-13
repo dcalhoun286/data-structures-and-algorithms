@@ -11,3 +11,5 @@
 - Class 05: [linked-list: insert(value), includes(value), toString()](data-structures/linkedList/README.md)
 
 - Class 06: [ll-insertions: append(value), insertBefore(value, newVal), insertAfter(value, newVal)](data-structures/linkedList/README.md)
+
+- Class 07: [ll-kth-from-end: kthFromEnd(k)](data-structures/linkedList/README.md)
