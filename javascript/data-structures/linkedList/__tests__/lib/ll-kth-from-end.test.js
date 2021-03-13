@@ -30,7 +30,7 @@ describe('====== Linked List -- kth from end ======', () => {
     expect(list.kthFromEnd(test2)).toEqual(20);
   });
 
-  it('should return an exception if k is larger than the length of the linked list', () => {
+  it('should return an exception if k is out of range for the length of the linked list', () => {
     expect(list.kthFromEnd(test3)).toEqual('Exception');
   });
 
