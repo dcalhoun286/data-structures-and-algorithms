@@ -8,7 +8,7 @@ describe('====== Linked List Class ======', () => {
     expect(list.head).toEqual(null);
   });
 
-  it('should add items to the list', () => {
+  it('should add nodes to the beginning of the list', () => {
     let list = new LinkedList();
     let first = 'first';
     let second = 'second';
