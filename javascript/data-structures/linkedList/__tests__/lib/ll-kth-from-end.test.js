@@ -5,6 +5,7 @@ const LinkedList = require('../../lib/linked-list.js');
 describe('====== Linked List -- kth from end ======', () => {
 
   let list = new LinkedList();
+  let list2 = new LinkedList();
 
   let ten = 10;
   let twenty = 20;
@@ -18,20 +19,25 @@ describe('====== Linked List -- kth from end ======', () => {
   list.insert(twenty);
   list.insert(ten);
 
+  list2.insert(ten);
+
   let test1 = 0;
   let test2 = 3;
   let test3 = 20;
   let test4 = -3;
   let test5 = 3.3;
   let test6 = 'hi';
+  let test7 = 5;
 
   it('should return the node\'s value that is k from the end of the linked list', () => {
     expect(list.kthFromEnd(test1)).toEqual(50);
     expect(list.kthFromEnd(test2)).toEqual(20);
+    expect(list2.kthFromEnd(test1)).toEqual(10);
   });
 
   it('should return an exception if k is out of range for the length of the linked list', () => {
     expect(list.kthFromEnd(test3)).toEqual('Exception');
+    expect(list.kthFromEnd(test7)).toEqual('Exception');
   });
 
   it('should return an exception if k is a negative number', () => {
