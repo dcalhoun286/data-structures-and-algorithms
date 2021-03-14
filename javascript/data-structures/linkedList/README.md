@@ -77,9 +77,23 @@ An explanation for my approach:
 
 ### Added Features
 
+- Define a method called `kthFromEnd(k)` which takes a number, `k`, as a parameter. Return the node's value that is `k` from the end of the linked list.
+
 ### Structure and Testing
 
+Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge.
+
+Write tests to prove the following functionality:
+
+1. Where `k` is greater than the length of the linked list
+1. Where `k` and the length of the list are the same
+1. Where k is not a positive integer
+1. Where the linked list is of a size 1
+1. "Happy Path" where `k` is not at the end, but somewhere in the middle of the linked list.
+
 ### Approach & Efficiency
+
+- The solution code for `kthFromEnd(k)` has a Big O of O(2n), or O(n). The method has an algorithm that requires traversing the entire list to calculate its length. It then must traverse the list once more, possibly up to its full length, to find the needed Node and return its value.
 
 ## Solution
 
