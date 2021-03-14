@@ -119,6 +119,39 @@ class LinkedList {
     return 'Exception';
   }
 
+  kthFromEnd(k) {
+    if (typeof k !== 'number') {
+      return 'Exception';
+    }
+
+    if (!Number.isInteger(k)) {
+      return 'Exception';
+    }
+
+    if (k < 0) {
+      return 'Exception';
+    }
+
+    let counter1 = 0;
+    if (this.head) {
+      let current = this.head;
+      counter1++;
+      while (current.next) {
+        current = current.next;
+        counter1++;
+      }
+
+      if (k < counter1) {
+        let counter2 = counter1 - k;
+        current = this.head;
+        for (let i = 1; i < counter2; i++) {
+          current = current.next;
+        }
+        return current.value;
+      }
+    }
+    return 'Exception';
+  }
 }
 
 module.exports = LinkedList;

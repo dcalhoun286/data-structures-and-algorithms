@@ -4,6 +4,7 @@ These are Data Structures and Algorithms challenges that work with [singly linke
 
 - Pull Request [linked-list](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/31)
 - Pull Request [ll-insertions](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/32)
+- Pull Request [ll-kth-from-end](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/33)
 
 ## Author: Dar-Ci Calhoun
 
@@ -34,7 +35,7 @@ Write tests to prove the following functionality:
 1. Will return false when searching for a value in the linked list that does not exist
 1. Can properly return a collection of all the values that exist in the linked list
 
-## Approach & Efficiency
+### Approach & Efficiency
 
 An explanation for my approach:
 
@@ -64,13 +65,35 @@ Write tests to prove the following functionality:
 1. Can successfully insert after a node in the middle of the linked list
 1. Can successfully insert a node after the last node of the linked list
 
-## Approach & Efficiency
+### Approach & Efficiency
 
 An explanation for my approach:
 
 - I used the approach below for `append(value)` because at best this will have a big O value of O(n) when traversing the list to the end and adding the new Node onto the end.
 - After completing the whiteboard for `insertBefore(value, newVal)`, I figured out a way to refactor my code so that Big O was optimized. Instead of traversing the list a 2nd time, I instead evaluated the condition `current.next.value === searchKey`. Big O is O(n).
 - I used the approach below for `insertAfter(value, newVal)` because once we find the node in the list with a matching value, we can insert our new Node after this matching node (in a way that data won't be lost). Big O is O(n).
+
+## Challenge - `ll-kth-from-end` branch
+
+### Added Features
+
+- Define a method called `kthFromEnd(k)` which takes a number, `k`, as a parameter. Return the node's value that is `k` from the end of the linked list.
+
+### Structure and Testing
+
+Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge.
+
+Write tests to prove the following functionality:
+
+1. Where `k` is greater than the length of the linked list
+1. Where `k` and the length of the list are the same
+1. Where k is not a positive integer
+1. Where the linked list is of a size 1
+1. "Happy Path" where `k` is not at the end, but somewhere in the middle of the linked list.
+
+### Approach & Efficiency
+
+- The solution code for `kthFromEnd(k)` has a Big O of O(2n), or O(n). The method has an algorithm that requires traversing the entire list to calculate its length. It then must traverse the list once more, possibly up to its full length, to find the needed Node and return its value.
 
 ## Solution
 
@@ -82,6 +105,8 @@ An explanation for my approach:
 ![whiteboard1-ll-insertions](./assets/ll-insertions1.png)
 **WHITEBOARD for `ll-insertions` branch -- BOTTOM HALF**
 ![whiteboard2-ll-insertions](./assets/ll-insertions2.png)
+**WHITEBOARD for `ll-kth-from-end` branch**
+![whiteboard-ll-kth-from-end](./assets/ll-kth-from-end.png)
 
 **Solution Code**:
 
