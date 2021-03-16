@@ -30,7 +30,7 @@ class LinkedList {
         str += `[${current.value}] -> `;
       }
     }
-    str += 'NULL';
+    str += 'X';
     return str;
   }
 }
@@ -68,6 +68,8 @@ function zipLists(list1, list2) {
     current1.next = current2;
   }
 
+  return zippedList.toString();
+
   // if(!current1 && current2) {
   //   current1 = current2;
   // } else if (current1 && !current2) {
@@ -96,8 +98,7 @@ function zipLists(list1, list2) {
   // }
 
   // current1 = list2.head;
-  console.log(zippedList);
-  return zippedList;
+  // console.log(zippedList);
 
 }
 
