@@ -1,17 +1,15 @@
 'use strict';
 
-const LinkedList = require('../lib/linked-list.js');
-
-const llZip = require('../lib/ll-zip.js');
+const ll = require('../lib/ll-zip.js');
 
 describe('====== llZip ======', () => {
   it('should create an empty list on instantiation', () => {
-    let list = new LinkedList();
+    let list = new ll.List();
     expect(list.head).toEqual(null);
   });
 
   it('should add nodes to the beginning of the list', () => {
-    let list = new LinkedList();
+    let list = new ll.List();
     let first = 'first';
     let second = 'second';
 
@@ -23,8 +21,12 @@ describe('====== llZip ======', () => {
   });
 
   it('should zip two linked lists together, alternating nodes between each list', () => {
-    let list1 = new LinkedList();
-    let list2 = new LinkedList();
+    let list1 = new ll.List();
+    let list2 = new ll.List();
+    let list3 = new ll.List();
+    let list4 = new ll.List();
+    let list5 = new ll.List();
+    let list6 = new ll.List();
 
     let one = 1;
     let two = 2;
@@ -49,41 +51,27 @@ describe('====== llZip ======', () => {
     list2.insert(four);
     list2.insert(two);
 
-    const zippedList = {
-      head: {
-        value: 1,
-        next: {
-          value: 2,
-          next: {
-            value: 3,
-            next: {
-              value: 4,
-              next: {
-                value: 5,
-                next: {
-                  value: 6,
-                  next: {
-                    value: 7,
-                    next: {
-                      value: 8,
-                      next: {
-                        value: 9,
-                        next: {
-                          value: 10,
-                          next: null
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    };
+    list3.insert(ten);
+    list3.insert(eight);
+    list3.insert(six);
 
-    expect(llZip(list1, list2)).toEqual(zippedList);
+    list4.insert(nine);
+    list4.insert(seven);
+
+    list5.insert(eight);
+    list5.insert(six);
+
+    list6.insert(ten);
+    list6.insert(nine);
+    list6.insert(seven);
+
+    const zippedList1 = ll.zipLists(list1, list2);
+    const zippedList2 = ll.zipLists(list3, list4);
+    const zippedList3 = ll.zipLists(list5, list6);
+
+    expect(ll.zipLists(list1, list2)).toEqual(zippedList1);
+    expect(ll.zipLists(list3, list4)).toEqual(zippedList2);
+    expect(ll.zipLists(list5, list6)).toEqual(zippedList3);
   });
 
 });
