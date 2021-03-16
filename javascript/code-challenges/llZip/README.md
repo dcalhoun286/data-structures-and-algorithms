@@ -6,7 +6,7 @@ A code challenge that zips two linked lists.
 
 ## Links
 
-- Pull Request [ll-zip](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/27)
+- Pull Request [ll-zip](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/34)
 
 <!-- Short summary or background information -->
 
