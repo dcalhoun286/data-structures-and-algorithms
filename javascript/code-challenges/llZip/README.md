@@ -22,4 +22,4 @@ I formed the `Node` class constructor and the `LinkedList` class constructor by 
 ## Solution
 <!-- Embedded whiteboard image -->
 - [Solution code for ll-zip](lib/ll-zip.js)
-- ![ll-zip whiteboard]()
+- ![ll-zip whiteboard](assets/ll-zip.png)
