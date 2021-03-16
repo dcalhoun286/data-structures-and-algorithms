@@ -69,31 +69,35 @@ describe('====== llZip ======', () => {
     const zippedList2 = ll.zipLists(list3, list4);
     const zippedList3 = ll.zipLists(list5, list6);
 
-    expect(zippedList1.head.value).toEqual(1);
-    expect(zippedList1.head.next.value).toEqual(2);
-    expect(zippedList1.head.next.next.value).toEqual(3);
-    expect(zippedList1.head.next.next.next.value).toEqual(4);
-    expect(zippedList1.head.next.next.next.next.value).toEqual(5);
-    expect(zippedList1.head.next.next.next.next.next.value).toEqual(6);
-    expect(zippedList1.head.next.next.next.next.next.next.value).toEqual(7);
-    expect(zippedList1.head.next.next.next.next.next.next.next.value).toEqual(8);
-    expect(zippedList1.head.next.next.next.next.next.next.next.next.value).toEqual(9);
-    expect(zippedList1.head.next.next.next.next.next.next.next.next.next.value).toEqual(10);
-    expect(zippedList1.head.next.next.next.next.next.next.next.next.next.next).toBeNull();
+    expect(zippedList1).toEqual('head -> [1] -> [2] -> [3] -> [4] -> [5] -> [6] -> [7] -> [8] -> [9] -> [10] -> X');
+    expect(zippedList2).toEqual('head -> [6] -> [7] -> [8] -> [9] -> [10] -> X');
+    expect(zippedList3).toEqual('head -> [6] -> [7] -> [8] -> [9] -> [10] -> X');
 
-    expect(zippedList2.head.value).toEqual(6);
-    expect(zippedList2.head.next.value).toEqual(7);
-    expect(zippedList2.head.next.next.value).toEqual(8);
-    expect(zippedList2.head.next.next.next.value).toEqual(9);
-    expect(zippedList2.head.next.next.next.next.value).toEqual(10);
-    expect(zippedList2.head.next.next.next.next.next).toBeNull();
+    // expect(zippedList1.head.value).toEqual(1);
+    // expect(zippedList1.head.next.value).toEqual(2);
+    // expect(zippedList1.head.next.next.value).toEqual(3);
+    // expect(zippedList1.head.next.next.next.value).toEqual(4);
+    // expect(zippedList1.head.next.next.next.next.value).toEqual(5);
+    // expect(zippedList1.head.next.next.next.next.next.value).toEqual(6);
+    // expect(zippedList1.head.next.next.next.next.next.next.value).toEqual(7);
+    // expect(zippedList1.head.next.next.next.next.next.next.next.value).toEqual(8);
+    // expect(zippedList1.head.next.next.next.next.next.next.next.next.value).toEqual(9);
+    // expect(zippedList1.head.next.next.next.next.next.next.next.next.next.value).toEqual(10);
+    // expect(zippedList1.head.next.next.next.next.next.next.next.next.next.next).toBeNull();
 
-    expect(zippedList3.head.value).toEqual(6);
-    expect(zippedList3.head.next.value).toEqual(7);
-    expect(zippedList3.head.next.next.value).toEqual(8);
-    expect(zippedList3.head.next.next.next.value).toEqual(9);
-    expect(zippedList3.head.next.next.next.next.value).toEqual(10);
-    expect(zippedList3.head.next.next.next.next.next).toBeNull();
+    // expect(zippedList2.head.value).toEqual(6);
+    // expect(zippedList2.head.next.value).toEqual(7);
+    // expect(zippedList2.head.next.next.value).toEqual(8);
+    // expect(zippedList2.head.next.next.next.value).toEqual(9);
+    // expect(zippedList2.head.next.next.next.next.value).toEqual(10);
+    // expect(zippedList2.head.next.next.next.next.next).toBeNull();
+
+    // expect(zippedList3.head.value).toEqual(6);
+    // expect(zippedList3.head.next.value).toEqual(7);
+    // expect(zippedList3.head.next.next.value).toEqual(8);
+    // expect(zippedList3.head.next.next.next.value).toEqual(9);
+    // expect(zippedList3.head.next.next.next.next.value).toEqual(10);
+    // expect(zippedList3.head.next.next.next.next.next).toBeNull();
 
   });
 
