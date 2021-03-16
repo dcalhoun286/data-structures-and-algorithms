@@ -19,7 +19,7 @@ Write a function called `zipLists` which takes two linked lists as arguments. Zi
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![ll-zip whiteboard](assets/ll-zip.png)
+![ll-zip whiteboard]()
 -[Solution code for ll-zip](lib/ll-zip.js)
 
 ## Collaborators
