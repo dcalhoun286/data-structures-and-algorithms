@@ -4,10 +4,22 @@ const LinkedList = require('../lib/linked-list.js');
 
 const llZip = require('../lib/ll-zip.js');
 
-describe('====== Linked List Class ======', () => {
+describe('====== llZip ======', () => {
   it('should create an empty list on instantiation', () => {
     let list = new LinkedList();
     expect(list.head).toEqual(null);
+  });
+
+  it('should add nodes to the beginning of the list', () => {
+    let list = new LinkedList();
+    let first = 'first';
+    let second = 'second';
+
+    list.insert(first);
+    expect(list.head.value).toEqual(first);
+    list.insert(second);
+    expect(list.head.value).toEqual(second);
+    expect(list.head.next.value).toEqual(first);
   });
 
   it('should zip two linked lists together, alternating nodes between each list', () => {
