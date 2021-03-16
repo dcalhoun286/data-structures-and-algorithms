@@ -19,6 +19,20 @@ class LinkedList {
       this.head = current;
     }
   }
+
+  toString() {
+    let str = 'head -> ';
+    let current = this.head;
+    if (this.head) {
+      str += `[${current.value}] -> `;
+      while (current.next) {
+        current = current.next;
+        str += `[${current.value}] -> `;
+      }
+    }
+    str += 'NULL';
+    return str;
+  }
 }
 
 function zipLists(list1, list2) {
@@ -35,8 +49,23 @@ function zipLists(list1, list2) {
     let node = new Node(current2.value);
     current1.next = node;
     node.next = temp;
-    current1 = current1.next.next;
-    current2 = current2.next;
+
+    if (current1.next.next) {
+      current1 = current1.next.next;
+    }
+
+    if (current2.next) {
+      current2 = current2.next;
+    }
+  }
+
+  if (current1.next && !current2.next) {
+    let temp = current1.next;
+    let node = new Node(current2.value);
+    current1.next = node;
+    node.next = temp;
+  } else {
+    current1.next = current2;
   }
 
   // if(!current1 && current2) {
