@@ -23,5 +23,3 @@ I formed the `Node` class constructor and the `LinkedList` class constructor be 
 <!-- Embedded whiteboard image -->
 ![ll-zip whiteboard]()
 -[Solution code for ll-zip](lib/ll-zip.js)
-
-## Collaborators
