@@ -13,3 +13,4 @@
 - Class 06: [ll-insertions: append(value), insertBefore(value, newVal), insertAfter(value, newVal)](data-structures/linkedList/README.md)
 
 - Class 07: [ll-kth-from-end: kthFromEnd(k)](data-structures/linkedList/README.md)
+- Class 08: [ll-zip: zipLists(list1, list2)](code-challenges/llZip/README.md)
