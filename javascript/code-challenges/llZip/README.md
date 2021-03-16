@@ -1,6 +1,6 @@
 # llZip
 
-A code challenge that zips two singly linked lists.
+A code challenge that zips two singly linked lists into one singly linked list.
 
 ## Author: Dar-Ci Calhoun
 
