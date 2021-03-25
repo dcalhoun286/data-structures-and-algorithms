@@ -99,15 +99,15 @@ describe('====== Stacks and Queues ======', () => {
     expect(stack.peek()).toHaveReturnedWith('Exception');
   });
 
-  it('returns the correct boolean value depending on whether the stack is empty', () => {
+  it('returns the correct boolean when isEmpty is invoked', () => {
 
-    let stack1 = new stacksAndQueues.Stack();
+    let testStack1 = new stacksAndQueues.Stack();
 
-    let stack2 = new stacksAndQueues.Stack();
-    stack2.enqueue('lychee');
+    let testStack2 = new stacksAndQueues.Stack();
+    testStack2.push('lychee');
 
-    expect(stack1.isEmpty()).toBe(true);
-    expect(stack2.isEmpty()).toBe(false);
+    expect(testStack1.isEmpty()).toEqual(true);
+    expect(testStack2.isEmpty()).toEqual(false);
   });
 
   it('can successfully enqueue into a queue', () => {
@@ -204,15 +204,15 @@ describe('====== Stacks and Queues ======', () => {
     expect(queue.dequeue()).toHaveReturnedWith('Exception');
   });
 
-  it('returns the correct boolean value depending on whether the queue is empty', () => {
+  it('returns the correct boolean when isEmpty is invoked', () => {
 
-    let queue1 = new stacksAndQueues.Queue();
+    let testQueue1 = new stacksAndQueues.Queue();
 
-    let queue2 = new stacksAndQueues.Queue();
-    queue2.enqueue('lychee');
+    let testQueue2 = new stacksAndQueues.Queue();
+    testQueue2.enqueue('watermelon');
 
-    expect(queue1.isEmpty()).toBe(true);
-    expect(queue2.isEmpty()).toBe(false);
+    expect(testQueue1.isEmpty()).toEqual(true);
+    expect(testQueue2.isEmpty()).toEqual(false);
   });
 
 });

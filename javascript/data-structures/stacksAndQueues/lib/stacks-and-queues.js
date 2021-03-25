@@ -58,11 +58,22 @@ class Queue {
 
     return 'Exception';
   }
+
+  isEmpty() {
+    if (this.top === null) {
+      return Boolean(true);
+    } else {
+      return Boolean(false);
+    }
+  }
 }
 
 // last in, first out structure
 class Stack {
-
+  constructor() {
+    this.top = null;
+    this.storage = [];
+  }
 }
 
 module.exports = {
