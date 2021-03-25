@@ -199,7 +199,7 @@ describe('====== Stacks and Queues ======', () => {
 
     expect(queue.front).toBeNull();
     expect(queue.rear).toBeNull();
-    expect(Array.isArray(queue.storage)).toBeTrue();
+    expect(Array.isArray(queue.storage)).toBe(true);
     expect(queue.storage.length).toEqual(0);
   });
 
