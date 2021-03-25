@@ -62,9 +62,9 @@ class Queue {
   isEmpty() {
     if (!this.front) {
       return true;
-    } else {
-      return false;
     }
+
+    return false;
   }
 }
 
@@ -113,11 +113,12 @@ class Stack {
   }
 
   isEmpty() {
+
     if (!this.top) {
       return true;
-    } else {
-      return false;
     }
+
+    return false;
   }
 }
 
