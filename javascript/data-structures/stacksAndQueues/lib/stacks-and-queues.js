@@ -74,6 +74,18 @@ class Stack {
     this.top = null;
     this.storage = [];
   }
+
+  push(item) {
+
+    let node = new Node(item);
+
+    this.top = node;
+    this.storage.unshift(node);
+
+    if (this.storage.length > 1) {
+      this.top.next = this.storage[1];
+    }
+  }
 }
 
 module.exports = {
