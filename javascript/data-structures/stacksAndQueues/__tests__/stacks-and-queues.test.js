@@ -99,6 +99,17 @@ describe('====== Stacks and Queues ======', () => {
     expect(stack.peek()).toHaveReturnedWith('Exception');
   });
 
+  it('returns the correct boolean value depending on whether the stack is empty', () => {
+
+    let stack1 = new stacksAndQueues.Stack();
+
+    let stack2 = new stacksAndQueues.Stack();
+    stack2.enqueue('lychee');
+
+    expect(stack1.isEmpty()).toBe(true);
+    expect(stack2.isEmpty()).toBe(false);
+  });
+
   it('can successfully enqueue into a queue', () => {
     let queue = new stacksAndQueues.Queue();
 
@@ -191,6 +202,17 @@ describe('====== Stacks and Queues ======', () => {
 
     expect(queue.peek()).toHaveReturnedWith('Exception');
     expect(queue.dequeue()).toHaveReturnedWith('Exception');
+  });
+
+  it('returns the correct boolean value depending on whether the queue is empty', () => {
+
+    let queue1 = new stacksAndQueues.Queue();
+
+    let queue2 = new stacksAndQueues.Queue();
+    queue2.enqueue('lychee');
+
+    expect(queue1.isEmpty()).toBe(true);
+    expect(queue2.isEmpty()).toBe(false);
   });
 
 });
