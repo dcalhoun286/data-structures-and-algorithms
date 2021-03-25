@@ -134,11 +134,8 @@ describe('====== Stacks and Queues ======', () => {
   it('can successfully dequeue out of a queue the expected value', () => {
     let queue = new stacksAndQueues.Queue();
 
-    let node1 = new Node('rutabaga');
-    let node2 = new Node('tomato');
-
-    queue.enqueue(node1);
-    queue.enqueue(node2);
+    queue.enqueue('rutabaga');
+    queue.enqueue('tomato');
 
     let expected = queue.dequeue();
 
@@ -155,11 +152,8 @@ describe('====== Stacks and Queues ======', () => {
   it('can successfully peek into a queue, seeing the expected value', () => {
     let queue = new stacksAndQueues.Queue();
 
-    let node1 = new Node('brussels sprouts');
-    let node2 = new Node('cauliflower');
-
-    queue.enqueue(node1);
-    queue.enqueue(node2);
+    queue.enqueue('brussels sprouts');
+    queue.enqueue('cauliflower');
 
     let test = queue.peek();
 
@@ -170,9 +164,9 @@ describe('====== Stacks and Queues ======', () => {
   it('can successfully empty a queue after multiple dequeues', () => {
     let queue = new stacksAndQueues.Queue();
 
-    queue.enqueue(new Node('peas'));
-    queue.enqueue(new Node('lemon'));
-    queue.enqueue(new Node('jalapeño'));
+    queue.enqueue('peas');
+    queue.enqueue('lemon');
+    queue.enqueue('jalapeño');
 
     queue.dequeue();
     queue.dequeue();
