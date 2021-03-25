@@ -60,10 +60,10 @@ class Queue {
   }
 
   isEmpty() {
-    if (this.top === null) {
-      return Boolean(true);
+    if (!this.front) {
+      return true;
     } else {
-      return Boolean(false);
+      return false;
     }
   }
 }
@@ -110,6 +110,14 @@ class Stack {
     }
 
     return this.top.value;
+  }
+
+  isEmpty() {
+    if (!this.top) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 

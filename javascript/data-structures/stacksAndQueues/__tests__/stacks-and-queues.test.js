@@ -99,7 +99,7 @@ describe('====== Stacks and Queues ======', () => {
     expect(stack.peek()).toBe('Exception');
   });
 
-  it('returns the correct boolean when isEmpty is invoked on Stack', () => {
+  it('returns true when isEmpty is invoked on empty Stack', () => {
 
     let testStack1 = new stacksAndQueues.Stack();
 
@@ -204,7 +204,7 @@ describe('====== Stacks and Queues ======', () => {
     expect(queue.dequeue()).toBe('Exception');
   });
 
-  it('returns the correct boolean when isEmpty is invoked on Queue', () => {
+  it('returns true when isEmpty is invoked on empty Queue', () => {
 
     let testQueue1 = new stacksAndQueues.Queue();
 
