@@ -103,6 +103,14 @@ class Stack {
     this.top = this.storage[0];
     return popped.value;
   }
+
+  peek() {
+    if(!this.top) {
+      return 'Exception';
+    }
+
+    return this.top.value;
+  }
 }
 
 module.exports = {

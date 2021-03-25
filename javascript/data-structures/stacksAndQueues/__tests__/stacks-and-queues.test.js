@@ -95,11 +95,11 @@ describe('====== Stacks and Queues ======', () => {
   it('Calling pop or peek on empty stack raises exception', () => {
     let stack = new stacksAndQueues.Stack();
 
-    expect(stack.pop()).toHaveReturnedWith('Exception');
-    expect(stack.peek()).toHaveReturnedWith('Exception');
+    expect(stack.pop()).toBe('Exception');
+    expect(stack.peek()).toBe('Exception');
   });
 
-  it('returns the correct boolean when isEmpty is invoked', () => {
+  it('returns the correct boolean when isEmpty is invoked on Stack', () => {
 
     let testStack1 = new stacksAndQueues.Stack();
 
@@ -200,11 +200,11 @@ describe('====== Stacks and Queues ======', () => {
   it('Calling dequeue or peek on empty queue raises exception', () => {
     let queue = new stacksAndQueues.Queue();
 
-    expect(queue.peek()).toHaveReturnedWith('Exception');
-    expect(queue.dequeue()).toHaveReturnedWith('Exception');
+    expect(queue.peek()).toBe('Exception');
+    expect(queue.dequeue()).toBe('Exception');
   });
 
-  it('returns the correct boolean when isEmpty is invoked', () => {
+  it('returns the correct boolean when isEmpty is invoked on Queue', () => {
 
     let testQueue1 = new stacksAndQueues.Queue();
 
