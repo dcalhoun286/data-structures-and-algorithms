@@ -14,18 +14,17 @@ class Queue {
 
     let node = new Node(item);
 
-    if (this.storage.length === 0) {
+    if (!this.storage.length) {
 
       this.storage.push(node);
       this.front = node;
       this.rear = node;
 
-    } else if (this.storage.length >= 1) {
+    } else {
 
       this.storage[this.storage.length - 1].next = node;
       this.storage.push(node);
       this.rear = node;
-
     }
   }
 
@@ -105,7 +104,7 @@ class Stack {
   }
 
   peek() {
-    if(!this.top) {
+    if (!this.top) {
       return 'Exception';
     }
 
