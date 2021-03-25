@@ -33,17 +33,17 @@ class Queue {
 
     if (this.storage.length === 1) {
 
-      let shifted = this.storage.shift();
+      let dequeued = this.storage.shift();
       this.front = null;
       this.rear = null;
 
-      return shifted.value;
+      return dequeued.value;
 
     } else if (this.storage.length > 1) {
 
-      let shifted = this.storage.shift();
+      let dequeued = this.storage.shift();
       this.front = this.storage[0];
-      return shifted.value;
+      return dequeued.value;
 
     }
 
@@ -85,6 +85,23 @@ class Stack {
     if (this.storage.length > 1) {
       this.top.next = this.storage[1];
     }
+  }
+
+  pop() {
+
+    if (!this.top) {
+      return 'Exception';
+    }
+
+    let popped = this.storage.shift();
+
+    if (!this.storage.length) {
+      this.top = null;
+      return popped.value;
+    }
+
+    this.top = this.storage[0];
+    return popped.value;
   }
 }
 
