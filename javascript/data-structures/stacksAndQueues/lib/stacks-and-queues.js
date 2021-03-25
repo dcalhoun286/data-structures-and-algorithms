@@ -49,6 +49,10 @@ class Queue {
 
     return 'Exception';
   }
+
+  peek() {
+    return this.front.value;
+  }
 }
 
 // last in, first out structure
