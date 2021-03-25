@@ -1,6 +1,5 @@
 'use strict';
 
-const Node = require('../lib/node.js');
 const stacksAndQueues = require('../lib/stacks-and-queues.js');
 
 describe('====== Stacks and Queues ======', () => {
@@ -9,7 +8,7 @@ describe('====== Stacks and Queues ======', () => {
 
     let stack = new stacksAndQueues.Stack();
 
-    stack.push(new Node('potato'));
+    stack.push('potato');
 
     expect(stack.top.value).toBe('potato');
     expect(stack.top.next).toBeNull();
@@ -22,8 +21,8 @@ describe('====== Stacks and Queues ======', () => {
 
     let stack = new stacksAndQueues.Stack();
 
-    stack.push(new Node('banana'));
-    stack.push(new Node('broccoli'));
+    stack.push('banana');
+    stack.push('broccoli');
 
     expect(stack.top.value).toBe('broccoli');
     expect(stack.top.next.value).toBe('banana');
@@ -37,13 +36,12 @@ describe('====== Stacks and Queues ======', () => {
 
     let stack = new stacksAndQueues.Stack();
 
-    stack.push(new Node('corn'));
-    stack.push(new Node('strawberry'));
+    stack.push('corn');
+    stack.push('strawberry');
 
     let test = stack.pop();
 
-    expect(test.value).toBe('strawberry');
-    expect(test.next).toBeNull();
+    expect(test).toBe('strawberry');
 
     expect(stack.top.value).toBe('corn');
     expect(stack.top.next).toBeNull();
@@ -56,9 +54,9 @@ describe('====== Stacks and Queues ======', () => {
 
     let stack = new stacksAndQueues.Stack();
 
-    stack.push(new Node('blueberry'));
-    stack.push(new Node('plum'));
-    stack.push(new Node('orange'));
+    stack.push('blueberry');
+    stack.push('plum');
+    stack.push('orange');
 
     stack.pop();
     stack.pop();
@@ -73,18 +71,16 @@ describe('====== Stacks and Queues ======', () => {
 
     let stack2 = new stacksAndQueues.Stack();
 
-    stack1.push(new Node('yam'));
+    stack1.push('yam');
 
-    stack2.push(new Node('shallot'));
-    stack2.push(new Node('papaya'));
+    stack2.push('shallot');
+    stack2.push('papaya');
 
     let expected1 = stack1.peek();
-    expect(expected1.value).toBe('yam');
-    expect(expected1.next).toBeNull();
+    expect(expected1).toBe('yam');
 
     let expected2 = stack2.peek();
-    expect(expected2.value).toBe('papaya');
-    expect(expected2.next.value).toBe('shallot');
+    expect(expected2).toBe('papaya');
   });
 
   it('can successfully instantiate an empty stack', () => {
@@ -92,7 +88,7 @@ describe('====== Stacks and Queues ======', () => {
     let stack = new stacksAndQueues.Stack();
 
     expect(stack.top).toBeNull();
-    expect(Array.isArray(stack.storage)).toBeTrue();
+    expect(Array.isArray(stack.storage)).toBe(true);
     expect(stack.storage.length).toEqual(0);
   });
 
@@ -106,9 +102,7 @@ describe('====== Stacks and Queues ======', () => {
   it('can successfully enqueue into a queue', () => {
     let queue = new stacksAndQueues.Queue();
 
-    let node = new Node('guava');
-
-    queue.enqueue(node);
+    queue.enqueue('guava');
 
     expect(queue.storage.length).toBe(1);
     expect(queue.storage[0].value).toBe('guava');
@@ -123,11 +117,8 @@ describe('====== Stacks and Queues ======', () => {
 
     let queue = new stacksAndQueues.Queue();
 
-    let node1 = new Node('kumquat');
-    let node2 = new Node('fig');
-
-    queue.enqueue(node1);
-    queue.enqueue(node2);
+    queue.enqueue('kumquat');
+    queue.enqueue('fig');
 
     expect(queue.storage.length).toBe(2);
     expect(queue.storage[0].value).toBe('kumquat');
@@ -151,8 +142,7 @@ describe('====== Stacks and Queues ======', () => {
 
     let expected = queue.dequeue();
 
-    expect(expected.value).toBe('rutabaga');
-    expect(expected.next).toBeNull();
+    expect(expected).toBe('rutabaga');
     expect(queue.storage.length).toBe(1);
     expect(queue.storage[0].value).toBe('tomato');
     expect(queue.storage[0].next).toBeNull();
@@ -173,8 +163,7 @@ describe('====== Stacks and Queues ======', () => {
 
     let test = queue.peek();
 
-    expect(test.value).toBe('brussels sprouts');
-    expect(test.next.value).toBe('cauliflower');
+    expect(test).toBe('brussels sprouts');
 
   });
 
