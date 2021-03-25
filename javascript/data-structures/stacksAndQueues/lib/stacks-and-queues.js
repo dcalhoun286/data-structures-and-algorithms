@@ -1,9 +1,17 @@
 'use strict';
 
-class Queue {
+const Node = require('./node.js');
 
+// first in, first out structure
+class Queue {
+  constructor() {
+    this.front = null;
+    this.rear = null;
+    this.storage = [];
+  }
 }
 
+// last in, first out structure
 class Stack {
 
 }
