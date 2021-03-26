@@ -14,3 +14,4 @@
 
 - Class 07: [ll-kth-from-end: kthFromEnd(k)](data-structures/linkedList/README.md)
 - Class 08: [ll-zip: zipLists(list1, list2)](code-challenges/llZip/README.md)
+- Class 09: [stack-and-queue](data-structures/stacksAndQueues/README.md)
