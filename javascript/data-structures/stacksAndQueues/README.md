@@ -70,6 +70,14 @@ I achieved an efficiency of O(1) for all of my class instantiations and the meth
   - `peek()`: This method reads the `top` property of a Class and returns the value of the Node stored there, as the Node stored in `top` is the Node at the top fo the Stack. If this method is called on an empty Stack, an `'Exception'` is raised.
 
 ## Solution
+
+### Solution Code
+
+- [Stack and Queue classes](lib/stacks-and-queues.js)
+- [Node class](lib/node.js)
+
+### Whiteboards
+
 <!-- Embedded whiteboard image -->
-- [Solution code for stack-and-queue](lib/stacks-and-queues.js)
-- ![stack-and-queue whiteboard]()
+![stack-and-queue whiteboard](assets/stack-and-queue-1.png)
+![stack-and-queue whiteboard: solution code](assets/stack-and-queue-2.png)
