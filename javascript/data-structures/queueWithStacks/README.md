@@ -48,3 +48,7 @@ Write tests to prove the following functionality:
 ### Whiteboard
 
 ![queue-with-stacks whiteboard](assets/queue-with-stacks.png)
+
+## Resources and Collaborators
+
+- [YouTube: Implement a Queue Using Stacks](https://www.youtube.com/watch?v=Wg8IiY1LbII)
