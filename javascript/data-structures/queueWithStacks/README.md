@@ -30,11 +30,14 @@ Write tests to prove the following functionality:
 
 ## Approach & Efficiency
 
+- `enqueue(item)` achieves O(1). Regardless of how many nodes are in the queue, it takes virtually the same amount of time to add another node, as this is done by performing the `push` method onto `stack1`, which itself is a method with O(1) efficiency.
+- `dequeue(item)` achieves O(n). Since a Stack utilizes a **F**irst **I**n, **L**ast **O**ut approach, this is the opposite of a queue, which utilizes a **F**irst **I**n, **F**irst **O**ut approach. Since the order of nodes in a PseudoQueue is maintained by utilizing two Stacks and we only have direct access to the node at the top of a Stack, in order to remove the first node in a PseudoQueue, the contents of `stack1` must be emptied into `stack2` by iterating over the `stack1.storage` array to reverse the order of the nodes, giving us access to the node at the front of the PseudoQueue by now utilizing `stack2`. This node is then removed, and to preserve the original order of the PseudoQueue for when `dequeue` is called again, all nodes remaining in `stack2` must be emptied again into `stack1` by iterating over the `stack2.storage` array. Since in most cases a `while` loop performs more efficiently than a `for` loop, a `while` loop is used to iterate over the arrays.
+
 ## API
 
 - `class PseudoQueue`: Each PseudoQueue has four properties: a `front`, a `rear`, a `stack1`, and a `stack2`. Upon instantiation of a new PseudoQueue, `front` and `rear` are set to `null`; and `stack1` and `stack1` are empty, newly instantiated Stacks. The `stack1` is used to maintain the order in which values are enqueued, and `stack2` is only utilized to dequeue items from the PseudoQueue.
-  - `enqueue(item)`: The method I used has a time/space efficiency of O(1). The value passed as an argument in `enqueue` is used to instantiate a Node, and then this Node is added to `stack1`.
-  - `dequeue(item)`:
+  - `enqueue(item)`: The value passed as an argument in `enqueue` is used to instantiate a Node, and then this Node is added to the top of `stack1`.
+  - `dequeue()`: The contents of `stack1` are emptied into `stack2` using a `while` loop. The node at the top of `stack2` is removed; then, another `while` loop is used to empty the remaining contents (if any) of `stack2` back into `stack1`. If `dequeue` is called on an empty PseudoQueue (if `PseudoQueue.front` is equal to `null`)
 
 ## Solution
 
@@ -42,7 +45,6 @@ Write tests to prove the following functionality:
 
 - [class PseudoQueue](lib/queue-with-stacks.js)
 
-### Whiteboards
+### Whiteboard
 
-![queue-with-stacks whiteboard]()
-![queue-with-stacks whiteboard: solution code]()
+![queue-with-stacks whiteboard](assets/queue-with-stacks.png)
