@@ -25,7 +25,7 @@ Write tests to prove the following functionality:
 1. Can successfully enqueue a value into a PseudoQueue
 1. Can successfully enqueue multiple values into a PseudoQueue
 1. Can successfully dequeue a value from the PseudoQueue
-1. Can successfully empty a PseudoQueue after dequeueing multiple values
+1. Can successfully empty a PseudoQueue after calling multiple dequeues
 1. Calling dequeue on an empty PseudoQueue raises an exception
 
 ## Approach & Efficiency
