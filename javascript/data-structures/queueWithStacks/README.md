@@ -12,7 +12,7 @@ This is a Data Structures and Algorithms challenge that works with [stacks and q
 
 ### Features
 
-- Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, this `Pseudoqueue` class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 `Stack` objects. Ensure that you create your class with the following methods:
+- Create a brand new `PseudoQueue` class. Do not use an existing Queue. Instead, this `PseudoQueue` class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 `Stack` objects. Ensure that you create your class with the following methods:
   - `enqueue(value)` which inserts `value` into the PseudoQueue
   -`dequeue()` which extracts a value from the PseudoQueue
 - The `Stack` instances have only `push`, `pop`, and `seek` methods. You should use your own Stack implementation. Instantiate these Stack objects into your PseudoQueue constructor.
