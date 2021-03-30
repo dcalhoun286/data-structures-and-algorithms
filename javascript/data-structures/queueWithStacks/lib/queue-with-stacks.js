@@ -32,7 +32,7 @@ class PseudoQueue {
 
   dequeue() {
 
-    if (!this.stack1.top) {
+    if (!this.front) {
       return 'Empty PseudoQueue';
     }
 
