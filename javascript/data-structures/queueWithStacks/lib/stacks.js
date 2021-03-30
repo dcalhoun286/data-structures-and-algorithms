@@ -21,15 +21,17 @@ class Stack {
       return 'Exception';
     }
 
-    this.storage.shift();
+    let popped = this.storage.shift();
 
     if(!this.storage.length) {
       this.top = null;
-      // return popped.value;
+      return popped.value;
+    } else {
+
+      this.top = this.storage[0];
+      return popped.value;
     }
 
-    this.top = this.storage[0];
-    // return popped.value;
   }
 
   peek() {

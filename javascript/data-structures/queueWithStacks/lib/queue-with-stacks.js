@@ -30,34 +30,36 @@ class PseudoQueue {
     }
   }
 
-  // dequeue() {
+  dequeue() {
 
-  //   if (this.stack1.top) {
+    if (this.stack1.top !== null) {
 
-  //     while (this.stack1.storage.length) {
-  //       this.stack2.push(this.stack1.top);
-  //       this.stack1.pop();
-  //     }
+      while (this.stack1.storage.length >= 1) {
+        this.stack2.push(this.stack1.top);
+        this.stack1.pop();
+      }
 
-  //     let dequeued = this.stack2.pop();
+      let dequeued = this.stack2.pop();
 
-  //     if (this.stack2.top) {
-  //       this.front = this.stack2.top;
-  //     }
+      if (this.stack2.top !== null) {
+        this.front = this.stack2.top;
+      } else {
+        this.front = null;
+        this.rear = null;
+      }
 
-  //     while(this.stack2.storage.length) {
-  //       this.stack1.push(this.stack2.top);
-  //     }
+      while(this.stack2.storage.length >= 1) {
+        this.stack1.push(this.stack2.top);
+        this.stack2.pop();
+      }
 
-  //     return dequeued.value;
+      return dequeued;
 
-  //   } else {
+    } else {
+      return 'Empty PseudoQueue';
+    }
 
-  //     return 'Exception';
-
-  //   }
-
-  // }
+  }
 }
 
 module.exports = PseudoQueue;
