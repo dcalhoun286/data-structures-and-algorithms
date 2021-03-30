@@ -32,33 +32,31 @@ class PseudoQueue {
 
   dequeue() {
 
-    if (this.stack1.peek() !== 'Exception') {
+    if (!this.stack1.top) {
+      return 'Empty PseudoQueue';
+    }
 
-      while (this.stack1.storage.length) {
-        this.stack2.push(this.stack1.top);
-        this.stack1.pop();
-      }
+    while (this.stack1.storage.length) {
+      this.stack2.push(this.stack1.top);
+      this.stack1.pop();
+    }
 
-      let dequeued = this.stack2.pop();
+    let dequeued = this.stack2.pop();
 
-      if (this.stack2.top) {
-        this.front = this.stack2.top;
-      } else {
-        this.front = null;
-        this.rear = null;
-      }
+    if (this.stack2.top) {
+      this.front = this.stack2.top;
 
       while(this.stack2.storage.length) {
         this.stack1.push(this.stack2.top);
         this.stack2.pop();
       }
 
-      return dequeued;
-
+    } else {
+      this.front = null;
+      this.rear = null;
     }
 
-    return 'Empty PseudoQueue';
-
+    return dequeued;
   }
 }
 
