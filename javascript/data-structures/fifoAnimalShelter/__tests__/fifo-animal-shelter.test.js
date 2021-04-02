@@ -1,6 +1,7 @@
 'use strict';
 
 const ShelterQueue = require('../lib/fifo-animal-shelter.js');
+const Node = require('../lib/node.js');
 
 describe('====== FIFO Animal Shelter ======', () => {
   it('can successfully enqueue a dog into the ShelterQueue', () => {
@@ -122,5 +123,12 @@ describe('====== FIFO Animal Shelter ======', () => {
     expect(queue.dogQueue.storage.length).toBe(0);
     expect(queue.catQueue.storage.length).toBe(0);
     expect(queue.dequeue('dog')).toBe('No pets available at this shelter');
+  });
+
+  it('can successfully instantiate a new Node', () => {
+    let node = new Node('test');
+
+    expect(node.value).toBe('test');
+    expect(node.next).toBeNull();
   });
 });
