@@ -109,4 +109,18 @@ describe('====== FIFO Animal Shelter ======', () => {
     expect(queue.dequeue('cat')).toBe('No pets available at this shelter');
     expect(queue.dequeue('mountain lion')).toBe('No pets available at this shelter');
   });
+
+  it('can successfully instantiate a new ShelterQueue', () => {
+    let queue = new ShelterQueue();
+
+    expect(queue.front).toBeNull();
+    expect(queue.rear).toBeNull();
+    expect(queue.dogQueue.front).toBeNull();
+    expect(queue.catQueue.front).toBeNull();
+    expect(queue.dogQueue.rear).toBeNull();
+    expect(queue.catQueue.rear).toBeNull();
+    expect(queue.dogQueue.storage.length).toBe(0);
+    expect(queue.catQueue.storage.length).toBe(0);
+    expect(queue.dequeue('dog')).toBe('No pets available at this shelter');
+  });
 });
