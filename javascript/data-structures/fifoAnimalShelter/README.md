@@ -22,4 +22,8 @@ This is a Data Structures and Algorithms challenge that works with [queues](http
 
 ### Solution Code
 
+- [ShelterQueue class](lib/fifo-animal-shelter.js)
+- [Node class](lib/node.js)
+- [Queue class](lib/queue.js)
+
 ### Whiteboards
