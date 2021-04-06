@@ -9,6 +9,7 @@ class ShelterQueue {
     this.rear = null;
     this.dogQueue = new Queue();
     this.catQueue = new Queue();
+    this.id = 0;
   }
 }
 
