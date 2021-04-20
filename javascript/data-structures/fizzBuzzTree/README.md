@@ -23,6 +23,7 @@ This is a Data Structures and Algorithms challenge that works with [k-ary trees]
 ### Structure and Testing
 
 1. Can successfully traverse a k-ary tree
+1. Can successfully instantiate a new Node
 1. Can successfully enqueue and dequeue from a queue
 1. Can successfully reassign each `node.value` on the new k-ary tree that is created
 
