@@ -17,4 +17,3 @@ Follow the link to the [blog](assets/BLOG.md) to see a more in-depth explanation
 ## Solution
 
 - [Solution code for insertion-sort](lib/insertion-sort.js)
-s
