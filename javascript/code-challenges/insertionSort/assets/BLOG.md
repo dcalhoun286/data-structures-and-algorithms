@@ -134,7 +134,7 @@ Fifth pass (i = 5):
 
 Sixth pass (i = 6):
 
-**Note**: at this point, we have an index of 6, which is the 7th position in our array (which does not exist ... there are only six elements in our array).
+**Note**: at this point, we have an index of 6, which is the 7th position in our array (which does not exist ... there are only six elements in our array). In JavaScript, attempting to write code as the pseudocode as stated would actually cause things to break, so it would probably be safe to infer that by `to arr.length` means `1 <= i < arr.length`. Just for the sake of it, I'll do one more pass below as if things wouldn't break.
 
 - let j = i - 1 .... which means during this pass, j is set to 5
 - let temp = arr[i] .... which means during this pass, temp is set to `undefined`.
