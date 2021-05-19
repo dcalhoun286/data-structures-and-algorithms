@@ -4,6 +4,8 @@ For this assignment, I wrote a blog that documents what the algorithm is doing s
 
 ![pseudocode-insertionSort](./insertion-sort.png)
 
+In the above example, the input of this method is implied to be one argument: an array of integers.
+
 Let's say you have the following array:
 
 [20, 18, 12, 8, 5, -2]
