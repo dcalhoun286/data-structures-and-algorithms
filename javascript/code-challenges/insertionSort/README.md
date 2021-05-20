@@ -1,6 +1,8 @@
 # Code Challenge: Insertion Sort
 
 <!-- PULL REQUEST AND BLOG LINKS HERE  -->
+- Pull Request [insertion-sort](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/44)
+- [Blog](./assets/BLOG.md)
 
 ## Challenge
 
