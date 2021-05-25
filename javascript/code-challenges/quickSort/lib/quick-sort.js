@@ -1,6 +1,6 @@
 'use strict';
 
-// when invoking the `quickSort` method, the argument entered for `left` is zero, and the argument for `right` is arr[arr.length - 1]
+// when invoking the `quickSort` method, the argument entered for `left` is zero, and the argument for `right` is arr.length - 1
 
 function quickSort(arr, left, right) {
 
