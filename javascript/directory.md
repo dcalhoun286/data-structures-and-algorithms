@@ -16,3 +16,4 @@
 - Class 08: [ll-zip: zipLists(list1, list2)](code-challenges/llZip/README.md)
 - Class 09: [stack-and-queue](data-structures/stacksAndQueues/README.md)
 - Class 11: [queue-with-stacks](data-structures/queueWithStacks/README.md)
+- Class 28: [quick-sort](data-structures/quickSort/README.md)
