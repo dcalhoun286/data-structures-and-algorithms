@@ -22,3 +22,9 @@ Follow the link to the [blog](assets/BLOG.md) to see a more in-depth explanation
 ## Solution
 
 - [Solution code for quick-sort](lib/quick-sort.js)
+
+## Resouces and Collaborators
+
+This article was a big help in my making much more sense of `quickSort` than the provided pseudocode:
+
+- [Guru99.com](https://www.guru99.com/quicksort-in-javascript.html)
