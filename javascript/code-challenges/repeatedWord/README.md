@@ -6,7 +6,7 @@ A code challenge that finds the first repeated word in a book.
 
 ## Links
 
-- Pull Request [repeated-word]()
+- Pull Request [repeated-word](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/48)
 
 ## Challenge
 
