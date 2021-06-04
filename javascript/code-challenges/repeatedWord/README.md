@@ -17,4 +17,4 @@ Write a function that accepts a lengthy string parameter. Without utilizing any 
 ## Solution
 
 - [Solution code for repeated-word](./lib/repeated-word.js)
-- ![repeated-word whiteboard](./assets/repeated-word.drawio.png)
+- ![repeated-word whiteboard](./assets/repeated-word.png)
