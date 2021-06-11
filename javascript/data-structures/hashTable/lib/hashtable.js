@@ -28,7 +28,6 @@ class HashMap {
   add (key, value) {
 
     if (this.contains(key)) { return 'key already exists'; }
-    if (this.contains(key) === 'exception') { return 'exception'; }
 
     let hashed = this.hash(key);
 
