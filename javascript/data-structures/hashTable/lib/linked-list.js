@@ -1,12 +1,6 @@
 'use strict';
 
-// pull in the Node class -> this will give us the ability to instantiate (add) new nodes to our linked list
 const Node = require('./node.js');
-
-/*
-  add our 1st node
-  this.head = { value: 10, next: null }
-*/
 
 class LinkedList {
   constructor() {
@@ -63,6 +57,7 @@ class LinkedList {
     let node = new Node(value);
     if (!this.head) {
       this.head = node;
+      // return;
     } else {
       let current = this.head;
       while (current.next) {
