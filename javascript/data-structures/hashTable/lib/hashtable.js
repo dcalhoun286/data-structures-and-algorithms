@@ -25,10 +25,10 @@ class HashMap {
 
   }
 
-  set (key, value) {
+  add (key, value) {
 
-    if (this.has(key)) { return 'key already exists'; }
-    if (this.has(key) === 'exception') { return 'exception'; }
+    if (this.contains(key)) { return 'key already exists'; }
+    if (this.contains(key) === 'exception') { return 'exception'; }
 
     let hashed = this.hash(key);
 
@@ -42,29 +42,24 @@ class HashMap {
 
   get (key) {
 
-    if (!this.has(key)) { return 'key  not found'; }
+    if (!this.contains(key)) { return null; }
 
     let hashed = this.hash(key);
 
     if (!this.map[hashed].head) { return null; }
 
     let current = this.map[hashed].head;
-    let values = [];
 
     while (current) {
-      values[values.length] = current.value;
+      if (`${key}` in current.value) { return current.value[key]; }
       current = current.next;
     }
 
-    return values;
-
   }
 
-  has (key) {
+  contains (key) {
 
     let hashed = this.hash(key);
-
-    if (hashed > this.map.length - 1) { return 'exception'; }
 
     if (this.map[hashed].head) {
 

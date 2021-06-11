@@ -9,11 +9,25 @@ describe('====== HashMap Implementation ======', () => {
     let hm = new HashMap(1000);
 
     hm.add('test', 'val');
+    let hashed = hm.hash('test');
+
+    let ll = hm.map[hashed];
+
+    let result = (testkey) => {
+
+      let current = ll.head;
+
+      while (current) {
+        if (`${testkey}` in current.value && current.value[testkey] === 'val') { return true; }
+        console.log(current.value);
+        current = current.next;
+      }
+
+      return false;
+    };
 
     expect(hm.contains('test')).toBe(true);
-
-    expect(hm.get('test')).toEqual('val');
-
+    expect(result('test')).toBe(true);
   });
 
   it('retrieving based on a key returns the value stored', () => {
