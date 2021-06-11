@@ -96,4 +96,33 @@ describe('====== HashMap Implementation ======', () => {
 
   });
 
+  it('returns the appropriate boolean value when running contains method', () => {
+
+    let hm = new HashMap(1000);
+
+    hm.add('hello', 'goodbye');
+
+    let test1 = hm.contains('hello');
+    let test2 = hm.contains('what');
+
+    expect(test1).toBe(true);
+    expect(test2).toBe(false);
+
+  });
+
+  it('will not add key/value pair if key already exists', () => {
+
+    let hm = new HashMap(1000);
+
+    let hashed = hm.hash('yes');
+
+    hm.add('yes', 'no');
+
+    let test = hm.add('yes', 'absolutely');
+
+    expect(test).toBe('key already exists');
+    expect(hm.map[hashed].head.next).toBe(null);
+
+  });
+
 });
