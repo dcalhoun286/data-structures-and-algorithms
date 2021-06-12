@@ -30,10 +30,10 @@ Write tests to prove the following functionality:
 
 ## Approach & Efficiency
 
-- `add(key, value)` has a max time complexity of `O(n)`. If this more than one key that has the same hash value (even if these keys are unique), they will both be stored within the Linked List located at the index determined by the hash. In order to append a node to a Linked List that already contains nodes, you must traverse the Linked List. This means the time it takes to add a key/value pair to a hash table is dependent on how long the linked list was before that key/value pair is added.
-- `get(key)`:
-- `contains(key)`:
-- `hash(key)`:
+- `add(key, value)` has a max time complexity of `O(1)` because we will be able to add the key/value pair by directly accessing the map index that was calculated by the hash (instead of iterating over the map). If there is a collision present at the calculated index, we need to traverse the Linked List to find the value associated with the input key. Max space complexity is `O(1)`: the key/value pair is being added to the hash map as an object `{[key]: value}` at the hashed index, and this key is also being added as a property to the hash table's `keys` object and set to `true`. If you attempt to add a key that already exists, the method will return a message `'key already exists'`.
+- `get(key)` has a max time complexity of `O(1)` because we will be able to find the index where the key is located by directly accessing the map index that was calculated by the hash (instead of iterating over the map). We will then traverse the Linked List to locate the node containing an object with that key as its property, and then return the associated value. Max space complexity is `O(1)` as we are performing a search/retrieve by hashing the key to directly access the index of the map at which the key would be located. If the key does not exist in the hash table, the method will return `null`.
+- `contains(key)` returns a boolean. It has a max space and time complexity of `O(1)` because we are attempting to locate the key in almost the exact same way we would run a `get` on that key, except for returning the value for that key if/once it is found, the method will return `true`. If the key is not found, the method will return `false`.
+- `hash(key)`: this method returns a number by first running a reducer on the key based on the ASCII value of each character. The math run on the reduced number is as follows: `reduced * 599 % this.size` to ensure that the output of this method falls within the range of available indices in the hash table. This has a time and space complexity of `O(1)`.
 
 ## Solution
 
