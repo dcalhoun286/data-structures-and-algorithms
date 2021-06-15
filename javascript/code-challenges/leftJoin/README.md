@@ -6,7 +6,7 @@ A code challenge that joins together two hashmaps.
 
 ## Links
 
-- Pull Request [left-join]()
+- Pull Request [left-join](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/50)
 
 ## Challenge
 
@@ -19,6 +19,8 @@ A code challenge that joins together two hashmaps.
 - Write at least three test assertions for each method that you define.
 
 ## Approach & Efficiency
+
+
 
 ## Solution
 
