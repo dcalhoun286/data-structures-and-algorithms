@@ -6,8 +6,16 @@ class HashMap {
 
   constructor(size) {
     this.size = size;
-    this.map = new Array(size).fill(new LinkedList());
+    this.map = [];
     this.keys = [];
+
+    this.fillMap();
+  }
+
+  fillMap() {
+    for (let i = 0; i < this.size; i++) {
+      this.map[this.map.length] = new LinkedList();
+    }
   }
 
   hash (key) {
