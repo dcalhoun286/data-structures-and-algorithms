@@ -1,10 +1,8 @@
 'use strict';
 
-const ShelterQueue = require('./fifo-animal-shelter.js');
-
 class Node {
   constructor(value) {
-    this.value = { animal: value, id: Queue.id++};
+    this.value = value;
     this.next = null;
   }
 }
