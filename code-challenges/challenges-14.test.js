@@ -212,7 +212,7 @@ const isSecure = (url) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
 
@@ -232,7 +232,38 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
+  const regexForX = /[Xx]{1}/;
+  const regexForO = /[Oo]{1}/;
 
+  // Documentation -- check if all values in any of the inner arrays are equal: https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal
+
+  const winnerTest = (arr) => {
+    if (arr.every(el => regexForX.test(el)) || arr.every(el => regexForO.test(el))) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  let row1 = [...board[0]];
+  let row2 = [...board[1]];
+  let row3 = [...board[2]];
+  let col1 = [board[0][0], board[1][0], board[2][0]];
+  let col2 = [board[0][1], board[1][1], board[2][1]];
+  let col3 = [board[0][2], board[1][2], board[2][2]];
+  let diag1 = [board[0][0], board[1][1], board[2][2]];
+  let diag2 = [board[0][2], board[1][1], board[2][0]];
+
+  if (winnerTest(row1)) { return true; }
+  if (winnerTest(row2)) { return true; }
+  if (winnerTest(row3)) { return true; }
+  if (winnerTest(col1)) { return true; }
+  if (winnerTest(col2)) { return true; }
+  if (winnerTest(col3)) { return true; }
+  if (winnerTest(diag1)) { return true; }
+  if (winnerTest(diag2)) { return true; }
+
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
