@@ -232,8 +232,9 @@ Here is a sample board:
 
 const detectTicTacToeWin = (board) => {
   // Solution code here...
-  const regexForX = /[Xx]{1}/;
-  const regexForO = /[Oo]{1}/;
+
+  const regexForX = /^[Xx]{1}$/;
+  const regexForO = /^[Oo]{1}$/;
 
   // Documentation -- check if all values in any of the inner arrays are equal: https://stackoverflow.com/questions/14832603/check-if-all-values-of-array-are-equal
 
