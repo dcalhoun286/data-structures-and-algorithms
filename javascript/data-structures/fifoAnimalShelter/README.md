@@ -2,7 +2,7 @@
 
 This is a Data Structures and Algorithms challenge that works with [queues](https://codefellows.github.io/common-curriculum/data_structures_and_algorithms/Code_401/class-10/resources/stacks_and_queues.html). I created a class `ShelterQueue` that implements two `Queue` class objects.
 
-# Author: Dar-Ci Calhoun
+## Author: Dar-Ci Calhoun
 
 ## Links
 
