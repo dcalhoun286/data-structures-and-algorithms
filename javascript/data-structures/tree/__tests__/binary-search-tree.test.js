@@ -46,7 +46,7 @@ describe('====== Binary Search Tree ======', () => {
     tree.add(25);
     tree.add(35);
 
-    let preOrderData = tree.preOrder(tree.root);
+    let preOrderData = tree.preOrder();
     expect(Array.isArray(preOrderData)).toBe(true);
     expect(preOrderData).toEqual([20, 10, 5, 15, 30, 25, 35]);
   });
@@ -60,7 +60,7 @@ describe('====== Binary Search Tree ======', () => {
     tree.add(25);
     tree.add(35);
 
-    let inOrderData = tree.inOrder(tree.root);
+    let inOrderData = tree.inOrder();
     expect(Array.isArray(inOrderData)).toBe(true);
     expect(inOrderData).toEqual([5, 10, 15, 20, 25, 30, 35]);
   });
@@ -74,7 +74,7 @@ describe('====== Binary Search Tree ======', () => {
     tree.add(25);
     tree.add(35);
 
-    let postOrderData = tree.postOrder(tree.root);
+    let postOrderData = tree.postOrder();
     expect(Array.isArray(postOrderData)).toBe(true);
     expect(postOrderData).toEqual([5, 15, 10, 25, 35, 30, 20]);
   });
