@@ -16,4 +16,4 @@ While perhaps not the most efficient, a for loop that is written that evaluates 
 
 ## Solution
 
-![Whitebaord](assets/multi-bracket-validation.png)
+![Whiteboard](assets/multi-bracket-validation.drawio.png)
