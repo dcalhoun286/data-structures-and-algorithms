@@ -1,77 +1,60 @@
 'use strict';
 
 const Node = require('./node.js');
+const BinaryTree = require('./binary-tree.js');
 
-class BinarySearchTree {
+class BinarySearchTree extends BinaryTree {
 
   constructor() {
-    this.root = null;
+    super();
   }
 
   add(value) {
 
     let node = new Node(value);
 
-    if (!this.root) {
-
-      this.root = node;
-
-    } else {
-
+    if (!this.root) { this.root = node; }
+    else {
       let current = this.root;
 
-      if (!current.left && !current.right) {
+      while (current.left || current.right) {
 
-        current.value < node.value ? current.right = node : current.left = node;
-
-      } else {
-
-        while (current.left || current.right) {
-
-          if (current.value < node.value && !current.right) {
-
-            current.right = node;
-            return;
-
-          } else if (current.value > node.value && !current.left) {
-
-            current.left = node;
-            return;
-          }
-
-          if (current.value < node.value && current.right) {
-
-            current = current.right;
-
-          } else if (current.value > node.value && current.left) {
-
-            current = current.left;
-          }
-
+        if (node.value < current.value && !current.left) {
+          current.left = node;
+          return;
         }
 
+        if (node.value > current.value && !current.right) {
+          current.right = node;
+          return;
+        }
+
+        current = node.value < current.value ? current.left : current.right;
       }
 
     }
   }
 
   contains(value) {
-
-    if (!this.root) {
-      return false;
-    }
+    if (!this.root) { return false; }
 
     let current = this.root;
+    let result = false;
 
-    if (!current.left && !current.right) {
+    while (current) {
 
-      if (current.value === value) {
-        return true;
+      if (value === current.value) {
+        result = true;
+        break;
       }
 
-      return false;
+      current = value < current.value ? current.left : current.right;
     }
+    return result;
   }
 }
+
+let bst = new BinarySearchTree();
+console.log(bst);
 
 module.exports = BinarySearchTree;
