@@ -21,4 +21,11 @@ Space complexity is `O(n)` - the function is requiring more space for the stack 
 
 ## Solution
 
+### Whiteboard
+
 ![Whiteboard](assets/multi-bracket-validation.drawio.png)
+
+### Solution Code
+
+- `validateBrackets(string)`: [multi-bracket-validation.js](./lib/multi-bracket-validation.js)
+- [stack.js](./lib/stack.js)
