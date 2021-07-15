@@ -10,7 +10,7 @@ class BinarySearchTree extends BinaryTree {
   }
 
   add(value) {
-
+    if (this.contains(value)) { return 'input value cannot already exist in tree'; }
     let node = new Node(value);
 
     if (!this.root) { this.root = node; }
@@ -19,18 +19,20 @@ class BinarySearchTree extends BinaryTree {
 
       while (current.left || current.right) {
 
-        if (node.value < current.value && !current.left) {
+        if (value < current.value && !current.left) {
           current.left = node;
           return;
         }
 
-        if (node.value > current.value && !current.right) {
+        if (value > current.value && !current.right) {
           current.right = node;
           return;
         }
 
-        current = node.value < current.value ? current.left : current.right;
+        current = value < current.value ? current.left : current.right;
       }
+
+      current.value > value ? current.left = node : current.right = node;
 
     }
   }
@@ -54,7 +56,12 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-let bst = new BinarySearchTree(7);
-console.log(bst);
+let tree = new BinarySearchTree();
+
+tree.add(5);
+tree.add(3);
+tree.add(7);
+
+console.log('tree', tree);
 
 module.exports = BinarySearchTree;
