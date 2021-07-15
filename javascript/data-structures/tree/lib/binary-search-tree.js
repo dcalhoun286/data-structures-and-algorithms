@@ -5,8 +5,8 @@ const BinaryTree = require('./binary-tree.js');
 
 class BinarySearchTree extends BinaryTree {
 
-  constructor() {
-    super();
+  constructor(value) {
+    super(value);
   }
 
   add(value) {
@@ -54,7 +54,7 @@ class BinarySearchTree extends BinaryTree {
   }
 }
 
-let bst = new BinarySearchTree();
+let bst = new BinarySearchTree(7);
 console.log(bst);
 
 module.exports = BinarySearchTree;
