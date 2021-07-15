@@ -4,11 +4,6 @@
 
 - Pull Request [multi-bracket-validation](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/39)
 
-## Collaborators
-
-- Dar-Ci Calhoun
-- Taylor Thornton
-
 ## Challenge Description
 
 Write a function that takes in a string comprised of opening and closing hard, soft and curly brackets. Our function should evaluate the string and return true if the brackets are balanced and false if the brackets are imbalanced.
@@ -22,7 +17,3 @@ While perhaps not the most efficient, a for loop that is written that evaluates 
 ## Solution
 
 ![Whitebaord](assets/multi-bracket-validation.png)
-
-## Resources
-
-- [How to validate brackets - Stack Overflow](https://stackoverflow.com/questions/50318277/how-to-validate-brackets)
