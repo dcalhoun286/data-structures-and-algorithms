@@ -10,9 +10,14 @@ Write a function that takes in a string comprised of opening and closing hard, s
 
 Imbalanced brackets can be a closing without an opening, an opening without a closing, or closing and opening brackets that do not match.
 
+Use a Stack or Queue to process your string.
+
 ## Approach & Efficiency
 
-While perhaps not the most efficient, a for loop that is written that evaluates if/else conditional statements which increment or decrement a counter. If the counter equals `0`, return `true` and if the counter does **not** equal `0`, return `false`.
+My function `validateString(string)` has an input string passed as an argument. Within the function, I instantiated a Stack. I iterate over the string: if the character is an opening bracket, it is pushed into the stack. If it is a closing bracket, `Stack.top` must be the current character's corresponding opening bracket for the string to be considered balanced. After iterating over the string, the stack must also be empty (meaning all opening brackets have a corresponding closing bracket).
+
+Time complexity is `O(n)` - the function at most would iterate over the entire input string.
+Space complexity is `O(n)` - the function is requiring more space for the stack as values referenced from the input string are pushed into it.
 
 ## Solution
 
