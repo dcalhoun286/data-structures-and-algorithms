@@ -51,7 +51,7 @@ Write tests to prove the following functionality:
   - `inorder()`: This method is a depth-first traversal method and takes no arguments. For this method, we first traverse the left subtree. Once a leaf is reached (or the left subtree of a node was already processed), the node value is added to the output array. Then, the same thing repeats for the right subtree.
   - `postOrder()`: This method is a depth-first traversal method and takes no arguments. For this method, all nodes of the left subtree are processed, followed by the nodes of the right subtree. The root node is processed last.
 - **Binary Search Tree**:
-  - Binary Search Tree is a sub-class of Binary Tree. The super class's constructor is inherited, along with all of the super class's fields/methods (which are already defined above). This tree accepts integers as values to be added to it.
+  - Binary Search Tree (BST) is a sub-class of Binary Tree. The super class's constructor is inherited, along with all of the super class's fields/methods (which are already defined above). This tree accepts integers as values to be added to it.
   - `add(value)`: This method accepts a value as an argument. Since BSTs are ordered and contain all unique values, the value of a root node's left child is always less than that of the root node. Conversely, the value of a root node's right child is always greater than that of a root node. To find where the input value should be added to the tree, a Node is instantiated with the input value, and traversal begins at the tree's root. To ensure that only unique values are added to the tree, `contains(value)` is called within `add(value)` first and has to return `false` for the method to proceed.
   - `contains(value)`: This method accepts a value as an argument, and returns a boolean value (`true` or `false`) depending on whether or not the input value was found in the tree. As mentioned above, BSTs are ordered and contain all unique values. Traversal begins at the root of a tree, and traversal will terminate in the following cases:
     - The value of the current node in the traversal matches the input value. Traversal discontinues and the method returns `true`.
@@ -66,3 +66,5 @@ Write tests to prove the following functionality:
 - [BinarySearchTree](lib/binary-search-tree.js)
 
 ### Whiteboards
+
+![whiteboard](./assets/tree.drawio.png)
