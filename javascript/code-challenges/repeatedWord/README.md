@@ -17,9 +17,4 @@ Write a function that accepts a lengthy string parameter. Without utilizing any 
 ## Solution
 
 - [Solution code for repeated-word](./lib/repeated-word.js)
-- ![repeated-word whiteboard](./assets/repeated-word.png)
-
-## Resources and Collaborators
-
-- Taylor Thornton: code challenge partner
-- Resource for adding words to an array without using `split()`: [dev.to](https://dev.to/imakki/how-to-split-string-without-using-js-s-inbuilt-spit-function-261b)
+- ![repeated-word whiteboard](./assets/repeated-word.drawio.png)
