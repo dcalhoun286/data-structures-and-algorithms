@@ -1,3 +1,4 @@
+
 const Node = require('./node.js');
 
 class BinaryTree {
