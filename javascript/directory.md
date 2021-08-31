@@ -16,3 +16,4 @@
 - Class 12: [fifo-animal-shelter](data-structures/fifoAnimalShelter/README.md)
 - Class 13: [multi-bracket-validation](code-challenges/multiBracketValidation/README.md)
 - Class 15: [tree](data-structures/tree/README.md)
+- Class 30: [hashtable](data-structures/hashTable/README.md)
