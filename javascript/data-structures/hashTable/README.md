@@ -6,7 +6,9 @@ This is a code challenge that implements a hash table, which is a data structure
 
 ## Links
 
-- Pull Request [hashtable](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/47)
+- Pull Requests
+  - [Pull 47](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/47)
+  - [Pull 54](https://github.com/dcalhoun286/data-structures-and-algorithms/pull/54)
 
 ## Challenge
 
