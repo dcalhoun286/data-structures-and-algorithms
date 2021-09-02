@@ -2,22 +2,25 @@
 
 function reverse(ll) {
 
-  if (!ll.head) { return 'Empty Linked List'; }
+  if (ll.head) {
+    let previous = null;
+    let current = ll.head;
+    let next;
 
-  let previous = null;
-  let current = ll.head;
-  let next;
+    while (current.next) {
+      next = current.next;
+      current.next = previous;
+      previous = current;
+      current = next;
+    }
 
-  while (current.next) {
-    next = current.next;
     current.next = previous;
-    previous = current;
-    current = next;
+    ll.head = current;
+    return ll;
+
+  } else {
+    return 'Empty Linked List';
   }
-
-  current.next = previous;
-
-  return ll;
 }
 
 module.exports = reverse;
