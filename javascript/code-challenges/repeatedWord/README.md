@@ -19,4 +19,7 @@ This is a standalone function. For it to work properly, I required the `HashMap`
 ## Solution
 
 - [Solution code for repeated-word](./lib/repeated-word.js)
+
+### Whiteboard
+
 - ![repeated-word whiteboard](./assets/repeated-word.drawio.png)
