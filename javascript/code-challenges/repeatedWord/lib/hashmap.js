@@ -4,11 +4,6 @@ const LinkedList = require ('./linked-list.js');
 
 class HashMap {
 
-  fillMap() {
-    for (let i = 0; i < this.size; i++) {
-      this.map[this.map.length] = new LinkedList();
-    }
-  }
   constructor(size) {
 
     this.size = size;
@@ -16,6 +11,12 @@ class HashMap {
     this.keys = [];
 
     this.fillMap();
+  }
+
+  fillMap() {
+    for (let i = 0; i < this.size; i++) {
+      this.map[this.map.length] = new LinkedList();
+    }
   }
 
   hash (key) {
