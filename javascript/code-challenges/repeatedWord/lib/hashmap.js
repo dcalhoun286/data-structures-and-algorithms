@@ -4,7 +4,7 @@ const LinkedList = require ('./linked-list.js');
 
 class HashMap {
 
-  constructor(size) {
+  constructor(size=1000) {
 
     this.size = size;
     this.map = [];
