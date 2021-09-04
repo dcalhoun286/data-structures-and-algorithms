@@ -1,4 +1,4 @@
-## repeatedWord
+# Code Challenge: repeatedWord
 
 A code challenge that finds the first repeated word in a book.
 
@@ -13,6 +13,8 @@ A code challenge that finds the first repeated word in a book.
 Write a function that accepts a lengthy string parameter. Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
 
 ## Approach & Efficiency
+
+This is a standalone function. For it to work properly, I required the `HashMap` class as a module and utilized an instance of this class in the function. Time and space complexity are both `O(n)`: the input string is split into an array, and then the array is iterated over as each element is added to an instance of the Hashmap.
 
 ## Solution
 
