@@ -17,3 +17,4 @@
 - Class 13: [multi-bracket-validation](code-challenges/multiBracketValidation/README.md)
 - Class 15: [tree](data-structures/tree/README.md)
 - Class 30: [hashtable](data-structures/hashTable/README.md)
+- Class 31: [repeated-word](code-challenges/repeatedWord/README.md)
